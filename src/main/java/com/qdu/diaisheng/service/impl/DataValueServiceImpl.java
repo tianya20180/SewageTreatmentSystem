@@ -10,21 +10,24 @@ import java.util.List;
 
 import com.qdu.diaisheng.service.DataValueService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
-
+@Service
 public class DataValueServiceImpl implements DataValueService {
 
     @Autowired
     private DataVauleDao dataValueDao;
 
-    /*
 
+    /**
+     * 向数据库中添加数据
+     * @param dataValue
+     * @return
+     */
     @Override
     public DataValueExecution addDataValue(DataValue dataValue) {
         if(dataValue!=null&&dataValue.getDataPoint()!=null&&dataValue.getDataPoint().getDataPointId()!=null){
-
-
             int effectedNum=dataValueDao.insertDataVaule(dataValue);
             if (effectedNum<0){
                 throw new RuntimeException("插入数据错误");
@@ -33,10 +36,15 @@ public class DataValueServiceImpl implements DataValueService {
             return new DataValueExecution(DataValueEnum.SUCCESS,dataValue);
 
         }else {
-            return new DataValueExecution(DataValueEnum.EMPTY);
+            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
         }
     }
 
+    /**
+     * 通过数据点Id来查询数据列表
+     * @param ponitId
+     * @return
+     */
     @Override
     public DataValueExecution getDataValueListByPointId(String ponitId) {
         DataValueExecution dve=new DataValueExecution();
@@ -52,22 +60,60 @@ public class DataValueServiceImpl implements DataValueService {
                 dve.setState(DataValueEnum.EMPTY.getState());
             }
         }else{
-            return new DataValueExecution(DataValueEnum.EMPTY);
+            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
         }
         return dve;
     }
 
+    /**
+     *
+     * 通过数据点Id和日期来获取数据
+     * @param date
+     * @param pointId
+     * @return
+     */
     @Override
-    public List<DataValue> getDataValueByDate(String date) {
+    public DataValueExecution getDataValueByPointIdAndDate(String date, String pointId) {
+        DataValueExecution dve=new DataValueExecution();
+        if(date!=null&&pointId!=null){
+            DataValue dataValue= dataValueDao.queryByDateAndPointID(date,pointId);
+            if(dataValue!=null){
+                dve.setDataValue(dataValue);
+
+                dve.setState(DataValueEnum.SUCCESS.getState());
+            }
+
+        }else{
+            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
+        }
+        return dve;
+    }
+
+    /**
+     *
+     * 通过日期来获取数据
+     * @param date
+     * @return
+     */
+    @Override
+    public List<DataValue> getDataValueListByDate(String date) {
         return dataValueDao.queryByDate(date);
     }
 
+    /**
+     *
+     * 通过数据点Id来获取某个数据点下两个日期之间的数据
+     * @param
+     * @param date1
+     * @param date2
+     * @return
+     */
     @Override
-    public DataValueExecution getDateValueListBetween(String date1, String date2) {
+    public DataValueExecution getDateValueListAtPointIdBetweenDate(String date1,String date2,String pointId) {
         DataValueExecution dve=new DataValueExecution();
 
-        if(date1!=null&&date2!=null){
-            List<DataValue> dataValueList =dataValueDao.queryBetweenDate(date1,date2);
+        if(date1!=null&&date2!=null&&pointId!=null){
+            List<DataValue> dataValueList =dataValueDao.queryBetweenDateAndPonitId(date1,date2,pointId);
             if(dataValueList!=null){
                 dve.setDataValueList(dataValueList);
                 dve.setCount(dataValueList.size());
@@ -77,9 +123,9 @@ public class DataValueServiceImpl implements DataValueService {
                 dve.setState(DataValueEnum.EMPTY.getState());
             }
         }else{
-            return new DataValueExecution(DataValueEnum.EMPTY);
+            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
         }
         return dve;
     }
-    */
+
 }

@@ -4,12 +4,12 @@
     <insert id="insertDataVaule" keyProperty="dataValueId" keyColumn="data_value_id">
         insert into data_value(data_value_id,data_point_id,val,create_time)
         values
-        (#{dataValueId},#{dataPoint.dataPointId},#{value},#{createTime})
+        (#{dataValueId},#{dataPoint.dataPointId},#{value},date_format(#{createTime},'%Y-%m-%d %H:%i:%S'))
     </insert>
     <resultMap id="dataValueMap" type="com.qdu.diaisheng.entity.DataValue">
         <id column="data_value_id" property="dataValueId"/>
         <result column="val" property="value"/>
-        <result column="creat_time" property="createTime"/>
+        <result column="create_time" property="createTime"/>
         <association property="dataPoint" column="data_point_id" javaType="com.qdu.diaisheng.entity.DataPoint">
             <id column="data_point_id" property="dataPointId"/>
             <result column="data_point_name" property="dataPointName"/>

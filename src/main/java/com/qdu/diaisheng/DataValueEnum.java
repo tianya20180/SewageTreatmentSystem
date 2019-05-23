@@ -4,7 +4,7 @@ public enum DataValueEnum {
 
 
 
-    SUCCESS(1, "创建成功"), INNER_ERROR(-1001, "操作失败"),EMPTY(404,"数据为空");
+    SUCCESS(1, "成功"), INNER_ERROR(-1001, "操作失败"),EMPTY(404,"数据为空"),PAR_EMPTY(-1002,"参数为空");
 
 
     private int state;

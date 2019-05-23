@@ -43,10 +43,7 @@ public class DataValueTest extends BaseTest {
     @Ignore
     public void testQueryByDateAndDataPointId(){
 
-        String dataPointId="32269";
-        String date="2019-05-13 05:14:00";
-        DataValue  dv=dataVauleDao.queryByDateAndPointID(date,dataPointId);
-        System.out.println(dv);
+
 
     }
 
@@ -56,7 +53,7 @@ public class DataValueTest extends BaseTest {
         String date="2019-05-13 05:14:00";
         List<DataValue>dataValueList=dataVauleDao.queryByDate(date);
         for(DataValue dataValue:dataValueList){
-            System.out.println(dataValue);
+            System.out.println(dataValue.getCreateTime()+" "+dataValue.getValue());
         }
     }
 
@@ -67,7 +64,8 @@ public class DataValueTest extends BaseTest {
         String date1="2019-05-13 05:14:00";
         List<DataValue>dataValueList=dataVauleDao.queryBetweenDateAndPonitId(date1,date2,pointId);
         for(DataValue dataValue:dataValueList){
-            System.out.println(dataValue);
+            System.out.println(dataValue.getCreateTime()+" "+dataValue.getValue());
+
         }
     }
 

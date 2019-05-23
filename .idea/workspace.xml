@@ -6,7 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4b9be2-49ad-4639-82a1-5f4da1f660fb" name="Default Changelist" comment="" />
+    <list default="true" id="3a4b9be2-49ad-4639-82a1-5f4da1f660fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/service/DataValueServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/DataValueEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/DataValueEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/controller/DataValueAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/controller/DataValueAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/controller/DataValueManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/controller/DataValueManagementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/service/DataValueService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/service/DataValueService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/service/impl/DataValueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qdu/diaisheng/service/impl/DataValueServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/DataValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/DataValueDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/qdu/diaisheng/dao/DataValueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/qdu/diaisheng/dao/DataValueTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,39 +36,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataPointDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dto/DataValueExecution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#603#604#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="98">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,58 +48,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataPointDao.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DeviceDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="120">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataPointTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="439">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#743#744#0" expanded="true" />
+                <element signature="e#1589#1590#0" expanded="true" />
+                <element signature="e#1629#1630#0" expanded="true" />
+                <element signature="e#1763#1764#0" expanded="true" />
+                <element signature="e#1813#1814#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataModelDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -118,8 +78,77 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="24">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DeviceDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="6" column="91" lean-forward="true" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/service/DataValueServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,6 +173,9 @@
       <find>mapper</find>
       <find>sqlSessionFactory</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -170,16 +202,20 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DataPointDao.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataPointTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dto/DataValueExecution.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataValue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/service/DataValueTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/service/DataValueServiceTest.java" />
       </list>
     </option>
   </component>
@@ -190,18 +226,19 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="531" />
-    <option name="y" value="144" />
-    <option name="width" value="1707" />
-    <option name="height" value="902" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-111" />
+    <option name="y" value="185" />
+    <option name="width" value="1697" />
+    <option name="height" value="909" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,15 +289,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="diaisheng" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="迪爱生数据平台" type="b2602c69:ProjectViewProjectNode" />
-              <item name="迪爱生数据平台" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="diaisheng" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="迪爱生数据平台" type="b2602c69:ProjectViewProjectNode" />
@@ -353,6 +381,15 @@
             <path>
               <item name="迪爱生数据平台" type="b2602c69:ProjectViewProjectNode" />
               <item name="迪爱生数据平台" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="diaisheng" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="迪爱生数据平台" type="b2602c69:ProjectViewProjectNode" />
+              <item name="迪爱生数据平台" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,13 +400,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558520646750" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558583739631" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -401,7 +438,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataValueTest">
+  <component name="RunManager" selected="JUnit.DataValueServiceTest">
     <configuration name="DataModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="迪爱生数据平台" />
       <extension name="coverage">
@@ -427,6 +464,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.qdu.diaisheng.dao" />
       <option name="MAIN_CLASS_NAME" value="com.qdu.diaisheng.dao.DataPointTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataValueServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="迪爱生数据平台" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.qdu.diaisheng.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.qdu.diaisheng.service" />
+      <option name="MAIN_CLASS_NAME" value="com.qdu.diaisheng.service.DataValueServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -538,9 +590,11 @@
       <item itemvalue="JUnit.DataPointTest" />
       <item itemvalue="JUnit.DataValueTest" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.40" />
+      <item itemvalue="JUnit.DataValueServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DataValueServiceTest" />
         <item itemvalue="JUnit.DataValueTest" />
         <item itemvalue="JUnit.DataPointTest" />
         <item itemvalue="JUnit.DataModelTest" />
@@ -561,50 +615,51 @@
       <workItem from="1558152424750" duration="4799000" />
       <workItem from="1558244490221" duration="8390000" />
       <workItem from="1558425868425" duration="4585000" />
-      <workItem from="1558511555717" duration="8462000" />
+      <workItem from="1558511555717" duration="11127000" />
+      <workItem from="1558579161115" duration="4196000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataValueTest - 2019.05.22 at 17h 22m 15s.xml">
+    <history-entry file="DataValueTest - 2019.05.22 at 19h 10m 41s.xml">
       <configuration name="DataValueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 17h 23m 04s.xml">
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 25m 52s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 27m 50s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 30m 40s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 32m 53s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataValueTest - 2019.05.23 at 11h 33m 38s.xml">
       <configuration name="DataValueTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 17h 23m 37s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 35m 06s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 17h 25m 10s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 42m 05s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 04m 50s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 43m 49s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 11m 34s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 13m 39s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 14m 15s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 16m 01s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataValueTest - 2019.05.22 at 18h 17m 15s.xml">
-      <configuration name="DataValueTest" configurationId="JUnit" />
+    <history-entry file="DataValueServiceTest - 2019.05.23 at 11h 52m 22s.xml">
+      <configuration name="DataValueServiceTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26236000" />
+    <option name="totallyTimeSpent" value="33097000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="498" y="144" width="1707" height="902" extended-state="0" />
+    <frame x="0" y="28" width="1920" height="1018" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2583384" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2056928" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -613,7 +668,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32872927" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785176" visible="true" weight="0.52021563" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49785176" visible="true" weight="0.39206535" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -652,13 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -746,150 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" selection-start-line="15" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DeviceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1763#1764#0" expanded="true" />
-            <element signature="e#1813#1814#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DeviceDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-815">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataModelDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataPointDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataPointTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataModelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -905,8 +813,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dto/DataValueExecution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        <state relative-caret-position="827">
+          <caret line="64" column="44" lean-forward="true" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#372#373#0" expanded="true" />
@@ -917,6 +825,165 @@
             <element signature="e#560#561#0" expanded="true" />
             <element signature="e#603#604#0" expanded="true" />
             <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataModelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataPointDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataModelDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DeviceDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueAdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/DataValueEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DeviceDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DeviceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1629#1630#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1813#1814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/entity/DataValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="21" column="85" selection-start-line="21" selection-start-column="85" selection-end-line="21" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="91" lean-forward="true" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/dao/DataValueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qdu/diaisheng/service/DataValueServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
