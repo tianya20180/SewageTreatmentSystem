@@ -11,4 +11,9 @@
                 #{createTime});
     </insert>
 
+    <select id="queryDataPointListByDataModel" parameterType="Integer" resultType="com.qdu.diaisheng.entity.DataPoint">
+        select data_point_id,data_point_name from data_point where data_model_id=#{dataModelId};
+    </select>
+
+
 </mapper>

@@ -11,6 +11,7 @@ import java.util.List;
 import com.qdu.diaisheng.service.DataValueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
@@ -26,6 +27,7 @@ public class DataValueServiceImpl implements DataValueService {
      * @return
      */
     @Override
+    @Transactional
     public DataValueExecution addDataValue(DataValue dataValue) {
         if(dataValue!=null&&dataValue.getDataPoint()!=null&&dataValue.getDataPoint().getDataPointId()!=null){
             int effectedNum=dataValueDao.insertDataVaule(dataValue);

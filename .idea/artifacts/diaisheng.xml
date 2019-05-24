@@ -1,12 +1,13 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="unnamed">
-    <output-path>$PROJECT_DIR$/out/artifacts/unnamed</output-path>
+  <artifact type="exploded-war" name="diaisheng">
+    <output-path>$PROJECT_DIR$/target</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="迪爱生数据平台" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="迪爱生数据平台/web/Web" />
     </root>
   </artifact>
 </component>

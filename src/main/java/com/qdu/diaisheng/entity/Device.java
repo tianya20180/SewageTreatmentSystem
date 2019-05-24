@@ -5,7 +5,8 @@ import java.util.Date;
 public class Device {
     private String deviceId;//设备ID
     private String deviceName;//设备名
-    private Date createTime;//设备创建时间
+    private String createTime;//设备创建时间
+    private String lastTime;//最近一次的修改时间
 
     public String getDeviceId() {
         return deviceId;
@@ -23,11 +24,19 @@ public class Device {
         this.deviceName = deviceName;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
+    }
+
+    public String getLastTime() {
+        return lastTime;
+    }
+
+    public void setLastTime(String lastTime) {
+        this.lastTime = lastTime;
     }
 }

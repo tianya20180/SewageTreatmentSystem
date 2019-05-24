@@ -5,5 +5,7 @@
         insert into device(device_id,device_name,create_time)
         values (#{deviceId},#{deviceName},#{createTime});
     </insert>
-
+    <select id="queryDevice" resultType="com.qdu.diaisheng.entity.Device">
+        select *from device;
+    </select>
 </mapper>

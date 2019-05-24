@@ -15,13 +15,14 @@ public class DataPoint {
     private String varDesc;//变量描述
     private String dataFormual;//公式
     private String dataReverseFormual;//反向公式
-    private Date createTime;
+    private String createTime;
 
-    public Date getCreateTime() {
+
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
