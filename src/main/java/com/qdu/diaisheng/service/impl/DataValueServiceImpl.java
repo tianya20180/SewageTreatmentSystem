@@ -47,6 +47,7 @@ public class DataValueServiceImpl implements DataValueService {
      * @param ponitId
      * @return
      */
+    /*
     @Override
     public DataValueExecution getDataValueListByPointId(String ponitId) {
         DataValueExecution dve=new DataValueExecution();
@@ -66,21 +67,21 @@ public class DataValueServiceImpl implements DataValueService {
         }
         return dve;
     }
-
+ */
     /**
      *
-     * 通过数据点Id和日期来获取数据
+     * 通过deviceId和日期来获取数据
      * @param date
-     * @param pointId
+     * @param deviceId
      * @return
      */
     @Override
-    public DataValueExecution getDataValueByPointIdAndDate(String date, String pointId) {
+    public DataValueExecution getDataValueByDeviceAndDate(String date, String deviceId) {
         DataValueExecution dve=new DataValueExecution();
-        if(date!=null&&pointId!=null){
-            DataValue dataValue= dataValueDao.queryByDateAndPointID(date,pointId);
-            if(dataValue!=null){
-                dve.setDataValue(dataValue);
+        if(date!=null&&deviceId!=null){
+            List<DataValue> dataValueList= dataValueDao.getAllByDeviceAndDate(date,deviceId);
+            if(dataValueList!=null){
+                dve.setDataValueList(dataValueList);
 
                 dve.setState(DataValueEnum.SUCCESS.getState());
             }

@@ -16,7 +16,15 @@ public class DataPoint {
     private String dataFormual;//公式
     private String dataReverseFormual;//反向公式
     private String createTime;
+    private String lastEditTime;
 
+    public String getLastEditTime() {
+        return lastEditTime;
+    }
+
+    public void setLastEditTime(String lastEditTime) {
+        this.lastEditTime = lastEditTime;
+    }
 
     public String getCreateTime() {
         return createTime;

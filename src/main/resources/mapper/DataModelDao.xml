@@ -8,7 +8,7 @@
     </insert>
 
     <select id="queryDataModelByDeviceId" resultType="com.qdu.diaisheng.entity.DataModel">
-      select data_model_name,last_edit_time,data_point_count from data_model;
+      select data_model_id,data_model_name,last_edit_time,data_point_count from data_model;
     </select>
 
 

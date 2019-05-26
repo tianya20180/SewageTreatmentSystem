@@ -10,9 +10,15 @@
         <id column="data_value_id" property="dataValueId"/>
         <result column="val" property="value"/>
         <result column="create_time" property="createTime"/>
-        <association property="dataPoint" column="data_point_id" javaType="com.qdu.diaisheng.entity.DataPoint">
+        <association property="dataPoint" column="data_point_id"
+                     javaType="com.qdu.diaisheng.entity.DataPoint">
             <id column="data_point_id" property="dataPointId"/>
             <result column="data_point_name" property="dataPointName"/>
+            <association property="dataModel" column="data_model_id"
+                         javaType="com.qdu.diaisheng.entity.DataModel">
+                <id column="data_model_id" property="dataModelId"/>
+                <result column="data_model_name" property="dataModelName"/>
+            </association>
         </association>
     </resultMap>
 
@@ -28,12 +34,19 @@
 
   
 
-    <select id="queryByDateAndPointID" resultMap="dataValueMap">
-        select*from data_value where create_time=#{date} and data_point_id=#{dataPointId}
+    <select id="getAllByDeviceAndDate" resultMap="dataValueMap">
+
+         select*from data_value where create_time=DATE_FORMAT(#{date}, '%Y-%m-%d %H:%i:%S') and data_point_id in
+         (select data_point_id from data_point where data_model_id
+         in (select data_model_id from device where device_id=#{deviceId}))
+
     </select>
 
     <select id="queryBetweenDateAndPonitId" resultMap="dataValueMap">
         select*from data_value where data_point_id=#{dataPointId} and create_time between DATE_FORMAT(#{date1}, '%Y-%m-%d %H:%i:%S') and DATE_FORMAT(#{date2}, '%Y-%m-%d %H:%i:%S');
     </select>
+
+
+
 
 </mapper>

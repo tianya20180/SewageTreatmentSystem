@@ -13,9 +13,9 @@ public interface DataValueService {
 
     DataValueExecution addDataValue(DataValue dataValue);
 
-    DataValueExecution getDataValueListByPointId(String ponitId);
+   // DataValueExecution getDataValueListByPointId(String ponitId);
 
-    DataValueExecution getDataValueByPointIdAndDate(String date,String pointId);
+    DataValueExecution getDataValueByDeviceAndDate(String date,String deviceId);
 
     List<DataValue> getDataValueListByDate(String date);
 

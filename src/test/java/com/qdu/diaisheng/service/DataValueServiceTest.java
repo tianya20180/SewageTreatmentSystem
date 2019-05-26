@@ -33,21 +33,7 @@ public class DataValueServiceTest extends BaseTest {
         dataValueService.addDataValue(dataValue);
     }
 
-    @Test
 
-    public void testqueryByDateAndDatePoint(){
-        String date="2019-05-23 00:34:00";
-
-        String dataPointId="41607";
-        DataValueExecution dve=dataValueService.getDataValueByPointIdAndDate(date,dataPointId);
-        if(dve.getState()==DataValueEnum.SUCCESS.getState()){
-            System.out.println(dve.getDataValue());
-        }else{
-            System.out.println("失败："+ dve.getStateInfo());
-
-        }
-
-    }
     @Test
     @Ignore
     public void testqueryAtDataPointBetweenDate(){
