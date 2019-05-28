@@ -7,6 +7,7 @@ public class Device {
     private String deviceName;//设备名
     private String createTime;//设备创建时间
     private String lastTime;//最近一次的修改时间
+    private String userId;
 
     public String getDeviceId() {
         return deviceId;
