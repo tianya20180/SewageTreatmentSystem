@@ -21,5 +21,6 @@ public interface DataValueService {
 
     DataValueExecution getDateValueListAtPointIdBetweenDate(String date1,String date2,String pointId);
 
+    void exportDateValue(String pointId,String startDate,String endDate);
 
 }

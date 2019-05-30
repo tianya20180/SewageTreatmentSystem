@@ -131,4 +131,9 @@ public class DataValueServiceImpl implements DataValueService {
         return dve;
     }
 
+    @Override
+    public void exportDateValue(String pointId, String startDate, String endDate) {
+        dataValueDao.exportDataValue(pointId,startDate,endDate);
+    }
+
 }

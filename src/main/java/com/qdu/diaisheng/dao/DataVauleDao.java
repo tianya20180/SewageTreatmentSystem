@@ -17,4 +17,8 @@ public interface DataVauleDao {
                                                @Param("dataPointId") String dataPointId);//在一个数据点中查询两个日期之间的数据
 
     List<DataValue>getAllByDeviceAndDate(@Param("date")String date,@Param("deviceId")String deviceId);
+
+    void exportDataValue(@Param("pointId")String pointId,
+                        @Param("startDate")String startDate,
+                        @Param("endDate")String endDate);
 }

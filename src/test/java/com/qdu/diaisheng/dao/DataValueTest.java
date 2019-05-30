@@ -58,6 +58,7 @@ public class DataValueTest extends BaseTest {
     }
 
     @Test
+    @Ignore
     public void testQueryBetweenDateAndPointId(){
         String pointId="32269";
         String date2="2019-05-13 05:26:00";
@@ -69,6 +70,16 @@ public class DataValueTest extends BaseTest {
         }
     }
 
+    @Test
+    public void testExportData(){
+        String startDate="'2019-04-30 00:01:00";
+        String endDate="2019-04-30 02:14:0";
+        String pointId="41607";
+
+        dataVauleDao.exportDataValue(pointId,startDate,endDate);
+
+        //System.out.println(effectedNum);
+    }
 
 
 

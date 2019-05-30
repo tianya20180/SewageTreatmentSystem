@@ -32,7 +32,15 @@
     </select>
 
 
-  
+  <select id="exportDataValue">
+
+      select*from
+      (select 'data_point', 'time', 'val'  union all
+      select data_point_id,create_time,val from data_value
+      where data_point_id=#{pointId} and create_time between #{startDate} and #{endDate})a  into outfile 'tmp.csv' fields terminated by ",";
+
+
+  </select>
 
     <select id="getAllByDeviceAndDate" resultMap="dataValueMap">
 
@@ -45,6 +53,7 @@
     <select id="queryBetweenDateAndPonitId" resultMap="dataValueMap">
         select*from data_value where data_point_id=#{dataPointId} and create_time between DATE_FORMAT(#{date1}, '%Y-%m-%d %H:%i:%S') and DATE_FORMAT(#{date2}, '%Y-%m-%d %H:%i:%S');
     </select>
+
 
 
 

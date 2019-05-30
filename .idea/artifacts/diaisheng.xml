@@ -48,6 +48,14 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.7" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-access:1.1.7" />
           <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.8" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/poi-3.8-20120326.jar" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/poi-excelant-3.8-20120326.jar" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/poi-ooxml-3.8-20120326.jar" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/poi-ooxml-schemas-3.8-20120326.jar" />
+          <element id="dir-copy" path="$PROJECT_DIR$" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/ooxml-lib/dom4j-1.6.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/ooxml-lib/stax-api-1.0.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/下载/poi-3.8/ooxml-lib/xmlbeans-2.3.0.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="迪爱生数据平台/web/Web" />
