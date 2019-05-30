@@ -5,5 +5,5 @@ import java.util.List;
 
 public interface DeviceDao {
     int insertDevice(Device device);
-    List<Device> queryDevice();
+    List<Device> queryDevice(int userId);
 }

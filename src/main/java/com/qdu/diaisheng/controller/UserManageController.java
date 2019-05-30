@@ -44,7 +44,7 @@ public class UserManageController {
         HttpSession session = request.getSession();
         User user = userService.login(userName, passwordMd5);
         if (user != null) {
-            session.setAttribute("nowUser", user);
+           session.setAttribute("", user);
             modelMap.put("success", true);
 
         } else {

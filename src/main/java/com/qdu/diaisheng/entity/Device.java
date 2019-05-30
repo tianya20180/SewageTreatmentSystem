@@ -1,5 +1,7 @@
 package com.qdu.diaisheng.entity;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.util.Date;
 
 public class Device {
@@ -7,7 +9,15 @@ public class Device {
     private String deviceName;//设备名
     private String createTime;//设备创建时间
     private String lastTime;//最近一次的修改时间
-    private String userId;
+    private Integer userId;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
 
     public String getDeviceId() {
         return deviceId;

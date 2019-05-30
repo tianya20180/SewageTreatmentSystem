@@ -11,8 +11,18 @@
       select data_model_id,data_model_name,last_edit_time,data_point_count from data_model;
     </select>
 
-    <delete id="deleteDataModel" parameterType="String">
+    <delete id="deleteDataModel" parameterType="Integer">
         delete from data_model  where data_model_id=#{dataModelId}
     </delete>
+
+    <update id="updateDataModel" parameterType="com.qdu.diaisheng.entity.DataModel">
+        update data_model
+        <set>
+          <if test="dataModelName !=null">
+            data_model_name=#{dataModelName}
+          </if>
+        </set>
+        where data_model_id=#{dataModelId}
+    </update>
 
 </mapper>

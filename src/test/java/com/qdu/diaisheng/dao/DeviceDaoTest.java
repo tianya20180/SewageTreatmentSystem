@@ -23,12 +23,6 @@ public class DeviceDaoTest extends BaseTest {
     System.out.println(effectedNum);
   }
 
-  @Test
-  public void testQueryDevice(){
-    List<Device>deviceList=deviceDao.queryDevice();
-    for(Device device:deviceList){
-      System.out.println(device);
-    }
-  }
+
 
 }

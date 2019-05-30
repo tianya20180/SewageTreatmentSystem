@@ -8,7 +8,7 @@ import java.util.List;
 public interface DataModelDao {
     int insertDataModel(DataModel dataModel);
     List<DataModel> queryDataModelByDeviceId(String Device);
-    int deleteDataModel(String dataModelId);
+    int deleteDataModel(int dataModelId);
     int updateDataModel(@Param("dataModelCondition") DataModel dataModelCondition,
-                        @Param("dataModelId") String dateModelId);
+                        @Param("dataModelId") int dataModelId);
 }

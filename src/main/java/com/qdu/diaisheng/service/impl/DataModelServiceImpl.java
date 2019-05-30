@@ -18,4 +18,19 @@ public class DataModelServiceImpl implements DataModelService {
     public List<DataModel> getDataModelByDeviceId(String deviceId) {
         return dataModelDao.queryDataModelByDeviceId(deviceId);
     }
+
+    @Override
+    public int addDataModel(DataModel dataModel) {
+        return dataModelDao.insertDataModel(dataModel);
+    }
+
+    @Override
+    public int deleteDataModel(int dataModelId) {
+        return dataModelDao.deleteDataModel(dataModelId);
+    }
+
+    @Override
+    public int updateDataModel(DataModel dataModel,int dataModelId) {
+        return dataModelDao.updateDataModel(dataModel,dataModelId);
+    }
 }

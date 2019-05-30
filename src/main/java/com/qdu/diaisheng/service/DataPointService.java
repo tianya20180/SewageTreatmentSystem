@@ -8,4 +8,6 @@ import org.springframework.stereotype.Service;
 public interface DataPointService {
 
     List<DataPoint> getDataPointListByDataModelId(int dataModelId);
+
+    String getDataPointName(String pointId);
 }

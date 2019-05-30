@@ -66,13 +66,13 @@ $(document).ready(function() {
 		var password=$('#p').val();
 		var url="/diaisheng/admin/logincheck";
 		$.ajax({
-			type: "POST",
+			type:'POST',
 			url: url,
 			data: {userName:username,password:password},
 			dataType: "json",
 			success: function(data) {
 				if(data.success){
-					alert("登陆成功");
+					alert("success");
 				}else{
 					alert(data.errMsg);
 				}

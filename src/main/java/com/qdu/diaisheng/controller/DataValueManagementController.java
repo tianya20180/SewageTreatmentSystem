@@ -163,6 +163,8 @@ public class DataValueManagementController {
             if(dve.getState()==DataValueEnum.SUCCESS.getState()){
                 List<DataValue>dataValueList=dve.getDataValueList();
                 if ( dataValueList!= null && dataValueList.size() > 0) {
+
+                    String dataPointName=dataPointService.getDataPointName(pointId);
                     String fileName = pointId+".xlsx";
                     response.setHeader("Content-disposition", "attachment;filename="
                             + new String(fileName.getBytes("gb2312"), "ISO8859-1"));//设置文件头编码格式
@@ -178,12 +180,14 @@ public class DataValueManagementController {
                     cellStyle.setDataFormat(workbook.createDataFormat().getFormat("yyyy-MM-dd HH:mm:ss"));
 
                     Row header=sheet.createRow(0);
-                    for(int cellNum=0;cellNum<3;cellNum++){
+                    for(int cellNum=0;cellNum<4;cellNum++){
                         Cell cell=header.createCell(cellNum);
 
                         if(cellNum==0){
-                            cell.setCellValue("pointId");
+                            cell.setCellValue("pointName");
                         }else if(cellNum==1){
+                            cell.setCellValue("pointId");
+                        }else if(cellNum==2){
                             cell.setCellValue("createTime");
                         }else{
                             cell.setCellValue("value");
@@ -195,15 +199,19 @@ public class DataValueManagementController {
                     for (DataValue dataValue:dataValueList) {
                         Row row = sheet.createRow(rowNum);
 
-                        Cell cell = row.createCell(0);
+                        Cell cell=row.createCell(0);
                         cell.setCellStyle(cellStyle);
-                        cell.setCellValue(dataValue.getDataPoint().getDataPointId());
+                        cell.setCellValue(dataPointName);
 
                         Cell cell1 = row.createCell(1);
-                        cell1.setCellValue(dataValue.getCreateTime());
+                        cell1.setCellStyle(cellStyle);
+                        cell1.setCellValue(dataValue.getDataPoint().getDataPointId());
 
                         Cell cell2 = row.createCell(2);
-                        cell2.setCellValue(dataValue.getValue());
+                        cell2.setCellValue(dataValue.getCreateTime());
+
+                        Cell cell3 = row.createCell(3);
+                        cell3.setCellValue(dataValue.getValue());
 
                         rowNum++;
                     }

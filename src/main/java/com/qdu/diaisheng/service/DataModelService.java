@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface DataModelService {
     List<DataModel> getDataModelByDeviceId(String deviceId);
+    int addDataModel(DataModel dataModel);
+    int deleteDataModel(int dataModelId);
+    int updateDataModel(DataModel dataModel,int dataModelId);
 }

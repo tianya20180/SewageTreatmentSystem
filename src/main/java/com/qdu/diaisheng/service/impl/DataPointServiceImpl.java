@@ -17,4 +17,10 @@ public class DataPointServiceImpl implements DataPointService {
     public List<DataPoint> getDataPointListByDataModelId(int dataModelId) {
         return dataPointDao.queryDataPointListByDataModel(dataModelId);
     }
+
+    @Override
+    public String getDataPointName(String pointId) {
+        return dataPointDao.getPointNameByPointId(pointId);
+    }
+
 }

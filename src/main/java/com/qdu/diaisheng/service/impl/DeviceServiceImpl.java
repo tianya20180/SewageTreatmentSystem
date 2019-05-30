@@ -14,7 +14,7 @@ public class DeviceServiceImpl implements DeviceService {
     DeviceDao deviceDao;
 
     @Override
-    public List<Device> getDeviceList() {
-        return deviceDao.queryDevice();
+    public List<Device> getDeviceList(int userId) {
+        return deviceDao.queryDevice(userId);
     }
 }

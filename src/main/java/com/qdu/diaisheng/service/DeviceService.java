@@ -5,5 +5,7 @@ import com.qdu.diaisheng.entity.Device;
 import java.util.List;
 
 public interface DeviceService {
-    List<Device> getDeviceList();
+    List<Device> getDeviceList(int userId);
+
+
 }
