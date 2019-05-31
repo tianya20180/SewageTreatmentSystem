@@ -10,4 +10,9 @@ public interface DataPointService {
     List<DataPoint> getDataPointListByDataModelId(int dataModelId);
 
     String getDataPointName(String pointId);
+
+    int deleteDataPoint(String dataPointId);
+
+    int editdataPoint(String dataPonitId,DataPoint dataPoint);
+
 }

@@ -15,7 +15,7 @@
         delete from data_model  where data_model_id=#{dataModelId}
     </delete>
 
-    <update id="updateDataModel" parameterType="com.qdu.diaisheng.entity.DataModel">
+    <update id="updateDataModel" parameterType="String">
         update data_model
         <set>
           <if test="dataModelName !=null">

@@ -30,7 +30,7 @@ public class DataModelServiceImpl implements DataModelService {
     }
 
     @Override
-    public int updateDataModel(DataModel dataModel,int dataModelId) {
-        return dataModelDao.updateDataModel(dataModel,dataModelId);
+    public int updateDataModel(String dataModelName,int dataModelId) {
+        return dataModelDao.updateDataModel(dataModelName,dataModelId);
     }
 }

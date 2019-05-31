@@ -18,4 +18,32 @@
         select data_point_name from data_point where data_point_id=#{dataPointId}
     </select>
 
+    <update id="updateDataPoint" >
+        update data_point
+        <set>
+          <if test="dataPointName !=null">
+              data_ponit_name=#{dataPointName},
+          </if>
+          <if test="dataPointRegister !=null">
+              data_point_regester=#{dataPointRegister},
+          </if>
+          <if test="dataType!=null">
+              data_type=#{dataType},
+          </if>
+          <if test="dataPointUnit!=null">
+              data_unit=#{dataPointUnit}
+          </if>
+          <if test="varDesc!=null">
+              var_desc=#{varDesc}
+          </if>
+          <if test="dataFormual!=null">
+              data_formual=#{dataFormual}
+          </if>
+          <if test="data_value_type!=null">
+              data_value_type=#{dataValueType}
+          </if>
+        </set>
+        where data_point_id=#{dataPointId}
+    </update>
+
 </mapper>

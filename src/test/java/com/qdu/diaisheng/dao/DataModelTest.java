@@ -18,11 +18,11 @@ public class DataModelTest extends BaseTest {
     @Ignore
     public void testInsertDataModel(){
         DataModel dataModel=new DataModel();
-        dataModel.setDataModelName("SOD");
+        dataModel.setDataModelName("test");
         Device device=new Device();
-        device.setDeviceId("0000000001");
+        device.setDeviceId("00015203000000000001");
         dataModel.setDevice(device);
-        //dataModel.setCreateTime(new Date());
+        dataModel.setCreateTime("2018-10-30 16:30:24.0");
         int effectedNum=dataModelDao.insertDataModel(dataModel);
         System.out.println(effectedNum);
     }
@@ -35,4 +35,23 @@ public class DataModelTest extends BaseTest {
             System.out.println(dataModel);
         }
     }
+
+    @Test
+    @Ignore
+    public void testDeleteDataModel(){
+        int dataModelId=8;
+        int effectedNum=dataModelDao.deleteDataModel(dataModelId);
+        System.out.println(effectedNum);
+    }
+
+    @Test
+    @Ignore
+    public void testUpdateDataModel(){
+        String dataModelName="ts";
+        int effectedNum=dataModelDao.updateDataModel(dataModelName,8);
+        System.out.println(effectedNum);
+
+    }
+
+
 }

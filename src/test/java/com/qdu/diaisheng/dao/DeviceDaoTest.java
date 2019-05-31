@@ -24,5 +24,14 @@ public class DeviceDaoTest extends BaseTest {
   }
 
 
+  @Test
+  public void testQueryDevice(){
+    int userId=1;
+    List<Device> deviceList= deviceDao.queryDevice(userId);
+    for(Device device:deviceList){
+      System.out.println(device);
+    }
+  }
+
 
 }

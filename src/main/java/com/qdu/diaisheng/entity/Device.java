@@ -11,6 +11,18 @@ public class Device {
     private String lastTime;//最近一次的修改时间
     private Integer userId;
 
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "deviceId='" + deviceId + '\'' +
+                ", deviceName='" + deviceName + '\'' +
+                ", createTime='" + createTime + '\'' +
+                ", lastTime='" + lastTime + '\'' +
+                ", userId=" + userId +
+                '}';
+    }
+
     public int getUserId() {
         return userId;
     }

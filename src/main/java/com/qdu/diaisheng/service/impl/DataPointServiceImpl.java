@@ -23,4 +23,14 @@ public class DataPointServiceImpl implements DataPointService {
         return dataPointDao.getPointNameByPointId(pointId);
     }
 
+    @Override
+    public int deleteDataPoint(String dataPointId) {
+        return dataPointDao.deleteDataPoint(dataPointId);
+    }
+
+    @Override
+    public int editdataPoint(String dataPonitId, DataPoint dataPoint) {
+        return dataPointDao.updateDataPoint(dataPoint,dataPonitId);
+    }
+
 }

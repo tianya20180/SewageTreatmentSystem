@@ -9,6 +9,6 @@ public interface DataModelDao {
     int insertDataModel(DataModel dataModel);
     List<DataModel> queryDataModelByDeviceId(String Device);
     int deleteDataModel(int dataModelId);
-    int updateDataModel(@Param("dataModelCondition") DataModel dataModelCondition,
+    int updateDataModel(@Param("dataModelName") String dataModelName,
                         @Param("dataModelId") int dataModelId);
 }
