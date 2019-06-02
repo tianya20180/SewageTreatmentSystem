@@ -70,16 +70,16 @@ public class DataValueServiceImpl implements DataValueService {
  */
     /**
      *
-     * 通过deviceId和日期来获取数据
+     * 通过pointId和日期来获取数据
      * @param date
-     * @param deviceId
+     * @param
      * @return
      */
     @Override
-    public DataValueExecution getDataValueByDeviceAndDate(String date, String deviceId) {
+    public DataValueExecution getnowdate(String date, String pointId) {
         DataValueExecution dve=new DataValueExecution();
-        if(date!=null&&deviceId!=null){
-            List<DataValue> dataValueList= dataValueDao.getAllByDeviceAndDate(date,deviceId);
+        if(date!=null&&pointId!=null){
+            List<DataValue> dataValueList= dataValueDao.getnowdate(date,pointId);
             if(dataValueList!=null){
                 dve.setDataValueList(dataValueList);
 
@@ -112,11 +112,11 @@ public class DataValueServiceImpl implements DataValueService {
      * @return
      */
     @Override
-    public DataValueExecution getDateValueListAtPointIdBetweenDate(String date1,String date2,String pointId) {
+    public DataValueExecution getDateValueListAtPointIdBetweenDate(String date1,String date2,List<String>dataPointIds) {
         DataValueExecution dve=new DataValueExecution();
 
-        if(date1!=null&&date2!=null&&pointId!=null){
-            List<DataValue> dataValueList =dataValueDao.queryBetweenDateAndPonitId(date1,date2,pointId);
+        if(date1!=null&&date2!=null&&dataPointIds!=null&&dataPointIds.size()>0){
+            List<DataValue> dataValueList =dataValueDao.queryBetweenDateAtPointIds(date1,date2,dataPointIds);
             if(dataValueList!=null){
                 dve.setDataValueList(dataValueList);
                 dve.setCount(dataValueList.size());

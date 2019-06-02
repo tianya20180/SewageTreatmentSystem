@@ -34,6 +34,7 @@ public class DataValueServiceTest extends BaseTest {
     }
 
 
+    /*
     @Test
     @Ignore
     public void testqueryAtDataPointBetweenDate(){
@@ -51,5 +52,5 @@ public class DataValueServiceTest extends BaseTest {
         }
     }
 
-
+*/
 }

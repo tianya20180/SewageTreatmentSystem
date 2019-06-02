@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestExecutionListeners;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -71,6 +72,7 @@ public class DataValueTest extends BaseTest {
     }
 
     @Test
+    @Ignore
     public void testExportData(){
         String startDate="'2019-04-30 00:01:00";
         String endDate="2019-04-30 02:14:0";
@@ -81,6 +83,19 @@ public class DataValueTest extends BaseTest {
         //System.out.println(effectedNum);
     }
 
+
+    @Test
+    public void  testqueryBetweenDateAtPointIds(){
+        String startDate="2019-04-30 00:01:00";
+        String endDate="2019-05-01 02:14:0";
+        List<String>pointIdList=new ArrayList<>();
+        pointIdList.add("41607");
+        pointIdList.add("32269");
+        List<DataValue> dataValueList=dataVauleDao.queryBetweenDateAtPointIds(startDate,endDate,pointIdList);
+        for(DataValue dataValue:dataValueList){
+            System.out.println(dataValue.getCreateTime()+" "+dataValue.getValue());
+        }
+    }
 
 
 }

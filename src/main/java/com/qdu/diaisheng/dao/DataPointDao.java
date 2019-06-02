@@ -12,5 +12,6 @@ public interface DataPointDao {
     int deleteDataPoint(String dataPonitId);
     int updateDataPoint(@Param("dataPoint")DataPoint dataPoint,
                         @Param("dataPointId")String dataPointId);
+    List<DataPoint> getDataPointbyDevice(String deviceId);
 
 }

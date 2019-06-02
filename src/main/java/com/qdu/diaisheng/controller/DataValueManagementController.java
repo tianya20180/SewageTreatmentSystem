@@ -35,13 +35,14 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/valueadmin")
 public class DataValueManagementController {
     @Autowired
     private DataValueService dataValueService;
@@ -52,6 +53,7 @@ public class DataValueManagementController {
     @Autowired
     private DeviceService device;
 
+    /*
     @RequestMapping(value = "/getdatabetweendate")
     @ResponseBody
     public Map<String,Object> getDataValueBetweenDate(HttpServletRequest request){
@@ -60,6 +62,23 @@ public class DataValueManagementController {
         String startDate=HttpServletUtil.getString(request,"startDate");
         String endDate=HttpServletUtil.getString(request,"endDate");
         DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate,dataPointId);
+        if(dve.getState()== DataValueEnum.SUCCESS.getState()){
+
+            modelMap.put("success",true);
+            modelMap.put("dataValue",dve.getDataValueList());
+        }else{
+            modelMap.put("success",false);
+            modelMap.put("errMsg",dve.getStateInfo());
+        }
+        return modelMap;
+    }*/
+
+
+    @RequestMapping(value = "/getdatabetweendate",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object> getDataValueBetweenDate(String[] dataPointsIds,String startDate,String endDate){
+        Map<String,Object> modelMap=new HashMap<String, Object>();
+        DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate, Arrays.asList(dataPointsIds));
         if(dve.getState()== DataValueEnum.SUCCESS.getState()){
 
             modelMap.put("success",true);
@@ -93,9 +112,9 @@ public class DataValueManagementController {
     public Map<String,Object> getDataValue(HttpServletRequest request){
 
         String date=HttpServletUtil.getString(request,"date");
-        String deviceId=HttpServletUtil.getString(request,"deviceId");
+        String pointId=HttpServletUtil.getString(request,"pointId");
         Map<String,Object> modelMap=new HashMap<String, Object>();
-        DataValueExecution dve= dataValueService.getDataValueByDeviceAndDate(date,deviceId);
+        DataValueExecution dve= dataValueService.getnowdate(date,pointId);
         if(dve.getState()== DataValueEnum.SUCCESS.getState()){
             modelMap.put("success",true);
             modelMap.put("dataValue",dve.getDataValueList());
@@ -107,53 +126,9 @@ public class DataValueManagementController {
 
     }
 
-    @RequestMapping(value = "/getdatamodel",method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String,Object>getDataModel(HttpServletRequest request){
-        Map<String,Object>modelMap=new HashMap<String,Object>();
-        String deviceId=HttpServletUtil.getString(request,"deviceId");
-        if(deviceId!=null){
-           List<DataModel>dataModelList=dataModelService.getDataModelByDeviceId(deviceId);
-           if(dataModelList!=null&&dataModelList.size()>0){
-               modelMap.put("success",true);
-               modelMap.put("dataModelList",dataModelList);
-           }else{
-               modelMap.put("success",false);
-               modelMap.put("errMsg", "数据模板为空");
-           }
-
-        }else{
-            modelMap.put("success",false);
-            modelMap.put("errMsg","设备为空");
-        }
-         return modelMap;
-    }
-
-    @RequestMapping(value = "/getdatapoint",method = RequestMethod.POST)
-    @ResponseBody
-    public Map<String,Object> getDataPoint(HttpServletRequest request){
-        Map<String,Object>modelMap=new HashMap<String,Object>();
-        int dataModelId=HttpServletUtil.getInt(request,"dataModelId");
-        if(dataModelId>0){
-             List<DataPoint>dataPointList=dataPointService.getDataPointListByDataModelId(dataModelId);
-             if(dataPointList!=null&&dataPointList.size()>0){
-                 modelMap.put("success",true);
-                 modelMap.put("dataPointList",dataPointList);
-             }else{
-                 modelMap.put("success",false);
-                 modelMap.put("errMsg","数据点为空");
-             }
 
 
-        }else{
-            modelMap.put("success",false);
-            modelMap.put("errMsg","数据模型id错误");
-        }
-
-        return modelMap;
-
-    }
-
+/*
         @RequestMapping(value = "/downLoadExcel", method = RequestMethod.GET)
         public String downLoadExcel(HttpServletRequest request, HttpServletResponse response) throws IOException{
             String pointId=HttpServletUtil.getString(request,"pointId");
@@ -225,6 +200,8 @@ public class DataValueManagementController {
 
             return null;
         }
+*/
+
 
 
 

@@ -33,4 +33,9 @@ public class DataPointServiceImpl implements DataPointService {
         return dataPointDao.updateDataPoint(dataPoint,dataPonitId);
     }
 
+    @Override
+    public List<DataPoint> getDataPointByDevice(String deviceId) {
+        return dataPointDao.getDataPointbyDevice(deviceId);
+    }
+
 }

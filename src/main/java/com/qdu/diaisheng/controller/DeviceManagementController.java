@@ -23,6 +23,7 @@ import java.util.List;
 @RequestMapping("/deviceadmin")
 public class DeviceManagementController {
 
+    //"diaisheng/deviceadmin/getdevice"
 
     @Autowired
     private DeviceDao deviceDao;

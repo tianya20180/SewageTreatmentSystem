@@ -15,4 +15,6 @@ public interface DataPointService {
 
     int editdataPoint(String dataPonitId,DataPoint dataPoint);
 
+    List<DataPoint> getDataPointByDevice(String deviceId);
+
 }

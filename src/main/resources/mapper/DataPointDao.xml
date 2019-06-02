@@ -11,11 +11,23 @@
                 #{createTime});
     </insert>
 
+    <resultMap id="dataPointMap" type="com.qdu.diaisheng.entity.DataPoint">
+        <id column="data_point_id" property="dataPointId"/>
+        <result column="data_point_name" property="dataPointName"/>
+        <association property="dataModel" column="data_model_id" javaType="com.qdu.diaisheng.entity.DataModel">
+            <id column="data_model_id" property="dataModelId"/>
+            <result column="data_model_name" property="dataModelName"/>
+        </association>
+    </resultMap>
     <select id="queryDataPointListByDataModel" parameterType="Integer" resultType="com.qdu.diaisheng.entity.DataPoint">
         select data_point_id,data_point_name, data_point_register,data_type,power,last_edit_time from data_point where data_model_id=#{dataModelId};
     </select>
     <select id="getPointNameByPointId" resultType="String">
         select data_point_name from data_point where data_point_id=#{dataPointId}
+    </select>
+
+    <select id="getDataPointbyDevice" resultMap="dataPointMap">
+        select*from data_point p,data_model m where p.data_model_id=m.data_model_id and m.device_id=#{deviceId};
     </select>
 
     <update id="updateDataPoint" >

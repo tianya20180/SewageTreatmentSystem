@@ -42,20 +42,26 @@
 
   </select>
 
-    <select id="getAllByDeviceAndDate" resultMap="dataValueMap">
+    <select id="getnowdate" resultMap="dataValueMap">
 
-         select*from data_value where create_time=DATE_FORMAT(#{date}, '%Y-%m-%d %H:%i:%S') and data_point_id in
-         (select data_point_id from data_point where data_model_id
-         in (select data_model_id from device where device_id=#{deviceId}))
+         select*from data_value where create_time=DATE_FORMAT(#{date}, '%Y-%m-%d %H:%i:%S') and data_point_id =#{dataPointId}
+
 
     </select>
 
     <select id="queryBetweenDateAndPonitId" resultMap="dataValueMap">
-        select*from data_value where data_point_id=#{dataPointId} and create_time between DATE_FORMAT(#{date1}, '%Y-%m-%d %H:%i:%S') and DATE_FORMAT(#{date2}, '%Y-%m-%d %H:%i:%S');
+        select*from data_value where data_point_id=#{dataPointId} and create_time between DATE_FORMAT(#{date1}, '%Y-%m-%d %H:%i:%S') and DATE_FORMAT(#{date2}, '%Y-%m-%d %H:%i:%S')
     </select>
 
 
-
+   <select id="queryBetweenDateAtPointIds" resultMap="dataValueMap">
+       select*from data_value where data_point_id in
+       <foreach collection="dataPointIds" item="dataPointId" open="("  separator="," close=")">
+         #{dataPointId}
+       </foreach>
+       and
+       create_time between DATE_FORMAT(#{date1}, '%Y-%m-%d %H:%i:%S') and DATE_FORMAT(#{date2}, '%Y-%m-%d %H:%i:%S')
+   </select>
 
 
 </mapper>
