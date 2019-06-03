@@ -53,39 +53,26 @@ public class DataValueManagementController {
     @Autowired
     private DeviceService device;
 
-    /*
-    @RequestMapping(value = "/getdatabetweendate")
-    @ResponseBody
-    public Map<String,Object> getDataValueBetweenDate(HttpServletRequest request){
-        Map<String,Object> modelMap=new HashMap<String, Object>();
-        String dataPointId= HttpServletUtil.getString(request,"dataPointId");
-        String startDate=HttpServletUtil.getString(request,"startDate");
-        String endDate=HttpServletUtil.getString(request,"endDate");
-        DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate,dataPointId);
-        if(dve.getState()== DataValueEnum.SUCCESS.getState()){
 
-            modelMap.put("success",true);
-            modelMap.put("dataValue",dve.getDataValueList());
-        }else{
-            modelMap.put("success",false);
-            modelMap.put("errMsg",dve.getStateInfo());
-        }
-        return modelMap;
-    }*/
 
 
     @RequestMapping(value = "/getdatabetweendate",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> getDataValueBetweenDate(String[] dataPointsIds,String startDate,String endDate){
         Map<String,Object> modelMap=new HashMap<String, Object>();
-        DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate, Arrays.asList(dataPointsIds));
-        if(dve.getState()== DataValueEnum.SUCCESS.getState()){
+        if(dataPointsIds!=null&&startDate!=null&&endDate!=null){
+            DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate, Arrays.asList(dataPointsIds));
+            if(dve.getState()== DataValueEnum.SUCCESS.getState()){
 
-            modelMap.put("success",true);
-            modelMap.put("dataValue",dve.getDataValueList());
+                modelMap.put("success",true);
+                modelMap.put("dataValue",dve.getDataValueList());
+            }else{
+                modelMap.put("success",false);
+                modelMap.put("errMsg",dve.getStateInfo());
+            }
         }else{
             modelMap.put("success",false);
-            modelMap.put("errMsg",dve.getStateInfo());
+            modelMap.put("errMsg","pointId为空或者日期为空");
         }
         return modelMap;
     }
@@ -128,19 +115,16 @@ public class DataValueManagementController {
 
 
 
-/*
+
         @RequestMapping(value = "/downLoadExcel", method = RequestMethod.GET)
-        public String downLoadExcel(HttpServletRequest request, HttpServletResponse response) throws IOException{
-            String pointId=HttpServletUtil.getString(request,"pointId");
-            String startDate=HttpServletUtil.getString(request,"startDate");
-            String endDate=HttpServletUtil.getString(request,"endDate");
-            DataValueExecution dve = dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate,pointId);
+        public String downLoadExcel(String[] dataPointsIds,String startDate,String endDate, HttpServletResponse response) throws IOException{
+
+            DataValueExecution dve = dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate,Arrays.asList(dataPointsIds));
             if(dve.getState()==DataValueEnum.SUCCESS.getState()){
                 List<DataValue>dataValueList=dve.getDataValueList();
                 if ( dataValueList!= null && dataValueList.size() > 0) {
 
-                    String dataPointName=dataPointService.getDataPointName(pointId);
-                    String fileName = pointId+".xlsx";
+                    String fileName = "value.xlsx";
                     response.setHeader("Content-disposition", "attachment;filename="
                             + new String(fileName.getBytes("gb2312"), "ISO8859-1"));//设置文件头编码格式
                     response.setContentType("APPLICATION/OCTET-STREAM;charset=UTF-8");//设置类型
@@ -176,7 +160,7 @@ public class DataValueManagementController {
 
                         Cell cell=row.createCell(0);
                         cell.setCellStyle(cellStyle);
-                        cell.setCellValue(dataPointName);
+                        cell.setCellValue(dataValue.getDataPoint().getDataPointName());
 
                         Cell cell1 = row.createCell(1);
                         cell1.setCellStyle(cellStyle);
@@ -200,7 +184,7 @@ public class DataValueManagementController {
 
             return null;
         }
-*/
+
 
 
 

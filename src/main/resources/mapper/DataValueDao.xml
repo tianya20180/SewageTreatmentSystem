@@ -11,7 +11,7 @@
         <result column="val" property="value"/>
         <result column="create_time" property="createTime"/>
         <association property="dataPoint" column="data_point_id"
-                     javaType="com.qdu.diaisheng.entity.DataPoint">
+                     javaType="com.qdu.diaisheng.entity.DataPoint" select="findById">
             <id column="data_point_id" property="dataPointId"/>
             <result column="data_point_name" property="dataPointName"/>
             <association property="dataModel" column="data_model_id"
@@ -21,6 +21,10 @@
             </association>
         </association>
     </resultMap>
+
+    <select id="findById" parameterType="String" resultType="com.qdu.diaisheng.entity.DataPoint">
+        select data_point_id,data_point_name,data_model_id from data_point where data_point_id=#{dataPointId}
+    </select>
 
     <select id="queryByDataPointId" parameterType="String" resultMap="dataValueMap">
        select*from data_value where data_point_id=#{dataPointId}

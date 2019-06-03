@@ -7,6 +7,7 @@ import com.qdu.diaisheng.service.DataPointService;
 import com.qdu.diaisheng.util.HttpServletUtil;
 import javafx.beans.binding.ObjectExpression;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,6 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Controller
+@RequestMapping("/datapointadmin")
 public class DataPointManageController {
 
 
@@ -26,7 +29,7 @@ public class DataPointManageController {
     @Autowired
     private DataModelService dataModelService;
 
-    @RequestMapping(value = "/getdatapoint",method = RequestMethod.POST)
+    @RequestMapping(value = "/getdatapoint",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getDataPoint(HttpServletRequest request){
         Map<String,Object>modelMap=new HashMap<String,Object>();
@@ -52,7 +55,7 @@ public class DataPointManageController {
     }
 
 
-    @RequestMapping(value = "/getpointbydevice",method = RequestMethod.POST)
+    @RequestMapping(value = "/getpointbydevice",method = RequestMethod.GET)
     @ResponseBody
     public Map<String,Object> getPointByDevice(HttpServletRequest request){
         Map<String,Object>modelMap=new HashMap<String,Object>();
@@ -74,6 +77,27 @@ public class DataPointManageController {
 
         return modelMap;
 
+    }
+
+    @RequestMapping(value = "/deletedatapoint",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,Object>deleteDataPoint(HttpServletRequest request){
+        Map<String,Object>modelMap=new HashMap<String,Object>();
+        String dataPointId=HttpServletUtil.getString(request,"dataPointId");
+        if(dataPointId!=null){
+            int effectedNum=dataPointService.deleteDataPoint(dataPointId);
+            if(effectedNum>0){
+                modelMap.put("success",true);
+            }else{
+                modelMap.put("success",false);
+                modelMap.put("errMsg","删除数据点失败");
+            }
+
+        }else{
+            modelMap.put("success",false);
+            modelMap.put("errMsg","数据点为空");
+        }
+        return modelMap;
     }
 
 
