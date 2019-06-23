@@ -89,9 +89,9 @@ public class Client {
             }
             byte[] sendBuffer=new byte[256];
             ByteUtil.putShort(sendBuffer, (short) 1,0);
-            ByteUtil.putShort(sendBuffer, (short) 2,2);
-            ByteUtil.putShort(sendBuffer, (short) 22,4);
-            ByteUtil.putShort(sendBuffer, (short) 2,6);
+            ByteUtil.putFloat(sendBuffer, (float) 8.112,2);
+            ByteUtil.putInt(sendBuffer,6,6);
+            ByteUtil.putFloat(sendBuffer, (float) 6.6,10);
             outputStream.write(sendBuffer);
 
         }else{

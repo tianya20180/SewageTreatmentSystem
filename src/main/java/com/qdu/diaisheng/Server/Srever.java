@@ -1,9 +1,16 @@
 package com.qdu.diaisheng.Server;
 
+import com.qdu.diaisheng.dao.DataModelDao;
+import com.qdu.diaisheng.dao.DataPointDao;
+import com.qdu.diaisheng.dao.DataVauleDao;
+import com.qdu.diaisheng.entity.DataModel;
+import com.qdu.diaisheng.entity.DataPoint;
+import com.qdu.diaisheng.entity.DataValue;
 import com.qdu.diaisheng.entity.RequestDataConfig;
 import com.qdu.diaisheng.util.ByteUtil;
 
 import com.qdu.diaisheng.util.UnitUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import sun.tools.jconsole.Plotter;
 
 
@@ -25,6 +32,13 @@ public class Srever {
 
 
 
+    @Autowired
+    private DataModelDao dataModelDao;
+    @Autowired
+    private DataPointDao dataPointDao;
+    @Autowired
+    private DataVauleDao dataVauleDao;
+
     public static int PORT=20001;
     public static RequestDataConfig requestDataConfig[]=new RequestDataConfig[5];
 
@@ -33,6 +47,17 @@ public class Srever {
 
         return socketServer;
     }
+
+    public void initRequestConfig(){
+
+    }
+
+
+    public void addValue(){
+
+    }
+
+
 
     public static void initSocket(ServerSocket serverSocket) throws SocketException {
         serverSocket.setReuseAddress(true);
@@ -47,8 +72,8 @@ public class Srever {
        requestDataConfig[0].setSlavaId(1);
        requestDataConfig[0].setLength((short) 16);
        requestDataConfig[0].setMessage(new int[]{0x01, 0x03, 0x00, 0x00, 0x00, 0x0C, 0x45,0xCF});
-       requestDataConfig[0].setType(new String[]{"uint16","uint16","uint16","uint16"});
-       requestDataConfig[0].setColumn(new String[]{"","","","",""});
+       requestDataConfig[0].setType(new String[]{"int16","float32","int32","float32"});
+       requestDataConfig[0].setColumn(new String[]{"1","2","3","4","5"});
 
         requestDataConfig[1]=new RequestDataConfig();
         requestDataConfig[1].setSlavaId(2);
@@ -125,12 +150,13 @@ public class Srever {
 
 
         public Map<String,Object> getValue(RequestDataConfig requestDataConfig,byte[]results) throws ParseException {
-            System.out.println("columns"+requestDataConfig.getColumn());
+
             Map<String,Object>data=new HashMap<String,Object>();
             //data.put("tsp",getTimeStamp());
             int pos=0,flen=0;
             int i=0;
             for(String type:requestDataConfig.getType()){
+                System.out.println("columns:"+requestDataConfig.getColumn()[i]);
                 pos=pos+flen;
 
                 float v=0;
@@ -160,14 +186,15 @@ public class Srever {
                         long unit32;
                         unit32= UnitUtil.getUint32(ByteUtil.getLong(results,pos));
                         System.out.println(unit32);
+                        flen=4;
                         break;
-                    case "float":
+                    case "float32":
                         float float32;
                         float32=ByteUtil.getFloat(results,pos);
                         System.out.println(float32);
                         flen=4;
                         break;
-                    case "double":
+                    case "float64":
                         double float64;
                         float64=ByteUtil.getDouble(results,pos);
                         flen=8;
@@ -176,6 +203,8 @@ public class Srever {
                     default:
                         System.out.println("error");
 
+
+
                 }
 
                 if(requestDataConfig.getColumn()[i]!="NG"){
@@ -183,6 +212,7 @@ public class Srever {
                 }
 
 
+                i++;
             }
             //System.out.println(data);
             return data;
@@ -194,7 +224,8 @@ public class Srever {
 
                 super.run();
                 System.out.println("start comm");
-                for(RequestDataConfig request:requestDataConfig){
+             //   for(RequestDataConfig request:requestDataConfig){
+                    RequestDataConfig request=requestDataConfig[0];
                     System.out.println(request.getSlavaId());
 
                     byte[] sendBuffer=new byte[128];
@@ -248,8 +279,9 @@ public class Srever {
 
 
 
+                //    break;
 
-                }
+               // }
 
 
 
