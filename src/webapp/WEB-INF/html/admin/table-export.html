@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    .right_content{
+		font-size: 18px;
+		padding: 12px 15px;
+		color: #252525;
+		position: relative;
+		transition: all 0.4s ease-in-out;
+		display: inline-block;
+		vertical-align: middle;
+		right:-500px;
+		}
+    </style>
+
+    <title>迪爱生数据平台</title>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Styles -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+		<!-- jquery vendor -->
+    <script src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js" type="text/javascript"></script>
+    <script src="../../NIIT_Project/web/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="assets/js/lib/menubar/sidebar.js"></script>
+    <script src="assets/js/lib/preloader/pace.min.js"></script>
+    <!-- sidebar -->
+    
+    <!-- bootstrap -->
+
+    <script src="assets/js/lib/bootstrap.min.js"></script><script src="assets/js/scripts.js"></script>
+    <!-- scripit init-->
+    <script src="assets/js/lib/data-table/datatables.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.dataTables.min.js"></script>
+    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.flash.min.js"></script>
+    <script src="assets/js/lib/data-table/jszip.min.js"></script>
+    <script src="assets/js/lib/data-table/pdfmake.min.js"></script>
+    <script src="assets/js/lib/data-table/vfs_fonts.js"></script>
+    <script src="assets/js/lib/data-table/buttons.html5.min.js"></script>
+    <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
+    <script src="assets/js/lib/data-table/datatables-init.js"></script>
+
+        <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+            <div class="nano">
+                <div class="nano-content">
+                    <div class="logo"><a href="index.html"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Focus</span></a></div>
+                    <ul>
+                        <li class="label">Main</li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> 监控中心 <span class="badge badge-primary">2</span> <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="index.html">地图展示</a></li>
+                                <li><a href="index1.html">列表展示</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+
+                        <li class="label">Apps</li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i>用户中心 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="chart-flot.html">角色管理</a></li>
+                                <li><a href="chart-morris.html">子用户管理</a></li>
+                                <li><a href="chartjs.html">用户信息</a></li>
+                                <li><a href="chartist.html">用户密码</a></li>
+                                <li><a href="chart-peity.html">通讯密码</a></li>
+                                <li><a href="chart-sparkline.html">微信绑定管理</a></li>
+                            
+                            </ul>
+                        </li>
+ 
+                        <li><a href="app-email.html"><i class="ti-email"></i> 手机端</a></li>
+                        <li><a href="app-profile.html"><i class="ti-user"></i> 物联网卡</a></li>
+                        <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> 摄像头管理</a></li>
+            
+                        <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> 中性管理 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="ui-typography.html"></a></li>
+                                <li><a href="ui-alerts.html">系统设置</a></li>
+                                
+                                <li><a href="ui-button.html">邮件服务器</a></li>
+                                <li><a href="ui-dropdown.html">邮件模板</a></li>
+                               
+                                <li><a href="ui-list-group.html">微信推送</a></li>
+                                
+                               
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-panel"></i> 组态管理<span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="uc-calendar.html">独立应用</a></li>
+                                <li><a href="uc-carousel.html">模板应用</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> 定时任务<span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="table-basic.html">任务监控</a></li>
+                               
+                            
+                            </ul>
+                        </li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> 数据管理<span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul id="datamanager">
+                                <li><a href="font-themify.html">数据模板</a></li>
+                                 <li><a href="font-themify.html">数据推送</a></li>
+                                  <li><a href="table-export.html">历史纪录</a></li>
+                                </ul>
+                               <!-- <div id="datadiv">
+                                <div><p>数据模板</p></div>
+                                <div><p>数据推送</p></div>
+                                <div><p>历史记录</p></div>
+                                </div>-->	
+                               </li>
+          
+                 
+                        <li><a class="sidebar-sub-toggle"><i class="ti-target"></i>触发器管理<span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                            <ul>
+                                <li><a href="page-login.html">触发器列表</a></li>
+                                <li><a href="page-register.html">添加触发器</a></li>
+                                <li><a href="page-reset-password.html">报警联系人/组</a></li>
+                                <li><a href="invoice-editable.html">报警记录</a></li>
+                            </ul>
+                       
+                                  <li><a href="app-email.html"><i class="ti-email"></i> 手机端</a></li>
+                        <li><a href="app-profile.html"><i class="ti-user"></i> 物联网卡</a></li>
+                        <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> 摄像头管理</a></li>
+						</li></ul></div></div></div>
+                        <div class="right_content" >
+                        <h6>历史曲线</h6>
+                        <label for="shebei">设备:</label>
+                        <select id="shebei">
+                            <option value ="diaisheng" id="diaisheng">sda</option>
+                            <option value ="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                           <label for="congji">从机:</label>
+                        <select id="congji">
+                            <option value ="out_water">出水电磁流量计</option>
+                            <option value ="cod">COD在线监测</option>
+                            <option value="in_water">进水电磁流量计</option>
+                            <option value="hate_o">厌氧温度控制</option>
+                            <option value="high">高浓排电磁流量计</option>
+
+                        </select>
+                           <label for="data">数据点:</label>
+                        <select id="data" multiple="multiple" size="2">
+                            <option value ="out_tem" name="out_tem">出水温度</option>
+                            <option value ="out_dot" name="out_dot">出水累计流量小数</option>
+                            <option value="out_big" name="out_big">出水累计流量整数</option>
+                            <option value="moment" name="moment">出水瞬时流量</option>
+                           
+                        </select> <br>
+                        <label for="start_time">起始时间：</label>
+                        <input type="datetime-local" id="start_time" step="01">
+                        <label for="end_time">结束时间：</label>
+                        <input type="datetime-local" id="end_time" step="01">
+                        <input type="button" value="查询" onclick="query()">
+                         <div id="main" style="height: 400px;width: 800px;"></div>
+                        
+                       
+<script type="text/javascript">
+
+var myCharts = echarts.init(document.getElementById("main"));
+        var option = {
+            title:{
+                text:'Line Test',
+                subtext:"Mountain Technology"
+            },
+            tooltip:{
+                trigger:'axis'
+            },
+            legend:{
+                data:'出水量'
+//                data:[]
+            },
+            grid:{
+                left:'3%',
+                right:'4%',
+                bottom:'3%',
+                containLabel:true
+            },
+            xAxis:{
+                type:'category',
+                data:['18:00','18:20','18:40','18:50','19:00','19:05','19:10','19:20','19:30','19:40','19:50'],
+                
+                axisLine:{
+                    lineStyle:{
+//                        color:''
+                    }
+                },
+        },
+        yAxis: {
+        type: 'value'
+    },
+         dataZoom: [
+        {
+            type: 'slider',
+            xAxisIndex: 0,
+            start: 10,
+            end: 60
+        },
+        {
+            type: 'inside',
+            xAxisIndex: 0,
+            start: 10,
+            end: 60
+        },
+        {
+            type: 'slider',
+            yAxisIndex: 0,
+            start: 30,
+            end: 80
+        },
+        {
+            type: 'inside',
+            yAxisIndex: 0,
+            start: 30,
+            end: 80
+        }
+    ],
+    
+            series:{
+                name:'出水量',
+                type:'line',
+                symbolSize:3,
+                color:['red'],
+                data:[1000,200,500,600,800,1100,500,800,600,500,600],
+//                data:[],
+                //关键点：实线虚线
+                smooth:false,
+                itemStyle:{
+                    normal:{
+                        lineStyle:{
+                            witdth:2,
+                            type:'solid'
+                        }
+                    }
+                }
+           
+        }
+            
+            
+        }
+        myCharts.setOption(option);
+ function query(){
+     var myCharts = echarts.init(document.getElementById("main"));
+        var option = {
+            title:{
+                text:'Line Test',
+                subtext:"Mountain Technology"
+            },
+            tooltip:{
+                trigger:'axis'
+            },
+            legend:{
+                data:'出水量'
+//                data:[]
+            },
+            grid:{
+                left:'3%',
+                right:'4%',
+                bottom:'3%',
+                containLabel:true
+            },
+            xAxis:{
+                type:'category',
+                data:['18:00','18:20','18:40','18:50','19:00','19:05','19:10','19:20','19:30','19:40','19:50'],
+                
+                axisLine:{
+                    lineStyle:{
+//                        color:''
+                    }
+                },
+        },
+        yAxis: {
+        type: 'value'
+    },
+         dataZoom: [
+        {
+            type: 'slider',
+            xAxisIndex: 0,
+            start: 10,
+            end: 60
+        },
+        {
+            type: 'inside',
+            xAxisIndex: 0,
+            start: 10,
+            end: 60
+        },
+        {
+            type: 'slider',
+            yAxisIndex: 0,
+            start: 30,
+            end: 80
+        },
+        {
+            type: 'inside',
+            yAxisIndex: 0,
+            start: 30,
+            end: 80
+        }
+    ],
+    
+            series:{
+                name:'出水量',
+                type:'line',
+                symbolSize:3,
+                color:['red'],
+                data:[1000,200,500,600,800,1100,500,800,600,500,600],
+//                data:[],
+                //关键点：实线虚线
+                smooth:false,
+                itemStyle:{
+                    normal:{
+                        lineStyle:{
+                            witdth:2,
+                            type:'solid'
+                        }
+                    }
+                }
+           
+        }
+            
+            
+        }
+        myCharts.setOption(option);
+    var shebei = document.getElementById("shebei").value;
+    var congji = document.getElementById("congji").value;
+    var data = document.getElementById("data").value;
+    var stime = document.getElementById("start_time").value;
+    var etime = document.getElementById("end_time").value;
+    console.log(shebei);
+    console.log(congji);
+    console.log(data);
+    console.log(stime);
+    console.log(etime);
+    myCharts.showLoading();
+    var name = [];
+    var series = [];
+    $.ajax({
+        type:"post",
+        url:url,
+        data:{"shebei":shebei,"congji":congji,"data":data,"stime":stime,"etime":etime},
+        dataType:"json",
+        success:function(data){
+            $.each(data.name,function(key,value){
+                name.push(value);
+            });
+            $.each(data.shu,function(key,value){
+                series.push(value);
+            });
+            myCharts.hideLoading();
+            myCharts.setOption({
+                xAxis:{
+                    data:name
+                },
+                series:{
+                    data:series
+                }
+            });
+
+        },
+        error: function (errorMsg) {
+            //请求失败时执行该函数
+            alert("图表请求数据失败!");
+            myChart.hideLoading();
+        }
+        
+        
+    });
+    
+}   
+
+
+
+</script>
+
+</body>
+
+</html>
