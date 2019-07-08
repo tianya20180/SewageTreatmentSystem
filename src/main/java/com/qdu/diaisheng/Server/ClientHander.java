@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ServerHander {
-    private static class ClientHander extends Thread{
+public class ClientHander extends Thread{
+
 
         private Socket socket;
         private boolean flag=true;
@@ -244,9 +244,4 @@ public class ServerHander {
 
 
         }
-
-
-
-
-    }
 }

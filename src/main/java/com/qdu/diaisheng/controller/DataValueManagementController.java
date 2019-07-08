@@ -35,6 +35,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -55,15 +57,15 @@ public class DataValueManagementController {
 
 
 
-
     @RequestMapping(value = "/getdatabetweendate",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> getDataValueBetweenDate(String[] dataPointsIds,String startDate,String endDate){
+    public Map<String,Object> getDataValueBetweenDate(String[] data,String stime,String etime){
         Map<String,Object> modelMap=new HashMap<String, Object>();
-        if(dataPointsIds!=null&&startDate!=null&&endDate!=null){
-            DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate, Arrays.asList(dataPointsIds));
+        if(data!=null&&etime!=null&&etime!=null){
+            stime=stime.replace("T"," ");
+           etime=etime.replace("T"," ");
+            DataValueExecution dve=dataValueService.getDateValueListAtPointIdBetweenDate(stime,etime, Arrays.asList(data));
             if(dve.getState()== DataValueEnum.SUCCESS.getState()){
-
                 modelMap.put("success",true);
                 modelMap.put("dataValue",dve.getDataValueList());
             }else{
@@ -76,6 +78,9 @@ public class DataValueManagementController {
         }
         return modelMap;
     }
+
+
+
 
 
     @RequestMapping(value = "/exportdate")
@@ -116,10 +121,16 @@ public class DataValueManagementController {
 
 
 
-        @RequestMapping(value = "/downLoadExcel", method = RequestMethod.GET)
-        public String downLoadExcel(String[] dataPointsIds,String startDate,String endDate, HttpServletResponse response) throws IOException{
+        @RequestMapping(value = "/downLoadExcel",method =RequestMethod.GET)
+        public void downLoadExcel(String[] data,String stime,String etime, HttpServletResponse response) throws IOException{
 
-            DataValueExecution dve = dataValueService.getDateValueListAtPointIdBetweenDate(startDate,endDate,Arrays.asList(dataPointsIds));
+
+            System.out.println(data);
+            System.out.println(stime);
+            System.out.println(etime);
+            stime=stime.replace("T"," ");
+            etime=etime.replace("T"," ");
+            DataValueExecution dve = dataValueService.getDateValueListAtPointIdBetweenDate(stime,etime,Arrays.asList(data));
             if(dve.getState()==DataValueEnum.SUCCESS.getState()){
                 List<DataValue>dataValueList=dve.getDataValueList();
                 if ( dataValueList!= null && dataValueList.size() > 0) {
@@ -181,8 +192,6 @@ public class DataValueManagementController {
                     response.getOutputStream().close();
                 }
             }
-
-            return null;
         }
 
 
