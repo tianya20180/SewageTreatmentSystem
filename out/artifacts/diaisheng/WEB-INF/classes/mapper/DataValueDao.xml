@@ -36,6 +36,11 @@
     </select>
 
 
+    <select id="queryLastData" parameterType="String" resultMap="dataValueMap">
+        select*from data_value where data_value_id=(select last_insert_id())
+        and data_point_id=#{dataPointId};
+    </select>
+
   <select id="exportDataValue">
 
       select*from
@@ -46,9 +51,10 @@
 
   </select>
 
-    <select id="getnowdate" resultMap="dataValueMap">
+    <select id="getnowdate" parameterType="String" resultMap="dataValueMap" >
 
-         select*from data_value where create_time=DATE_FORMAT(#{date}, '%Y-%m-%d %H:%i:%S') and data_point_id =#{dataPointId}
+         select*from data_value where  data_point_id =#{dataPointId} order by create_time desc limit 0,1;
+
 
 
     </select>

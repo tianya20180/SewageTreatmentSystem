@@ -777,12 +777,15 @@
             data:'',
             dataType:"json",
             success:function(data){
-                $.each(data.dataPoint,function(key,value){
+                console.log("222");
+                $.each(data.data,function(key,value){
                     time.push(value.createTime);
                     currentData.push(value.value);
-                    poiontID.push(value.dataPointId);
+                    pointID.push(value.dataPoint.dataPointId);
                 });
-                
+                console.log(time);
+                console.log(currentData);
+
             for(j = 0,i = 0,z = 0,len1=time.length,len2=currentData.length,len3=pointID.length; j < len1,i < len2,z < len3; i++,j++,z++) {
                 if(pointID[z] == d1){
                     time1.innerHTML=time[j];
@@ -841,7 +844,7 @@
             },
             error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("图表请求数据失败!");
+            alert("请求数据失败!");
             myChart.hideLoading();
         }
     
@@ -860,7 +863,7 @@ function Get(x){
     
     $.ajax({
         type:post,
-        data:{"x",x},
+        data:{"x":x},
         dataType:'json',
         success:function(data){
             $.each(data.dataValue,function(key,value){
