@@ -15,12 +15,14 @@ public interface DataValueService {
 
    // DataValueExecution getDataValueListByPointId(String ponitId);
 
-    DataValueExecution getnowdate(String date,String deviceId);
+    DataValueExecution getnowdate(String deviceId);
 
     List<DataValue> getDataValueListByDate(String date);
 
     DataValueExecution getDateValueListAtPointIdBetweenDate(String date1,String date2,List<String>pointIds);
 
     void exportDateValue(String pointId,String startDate,String endDate);
+
+
 
 }

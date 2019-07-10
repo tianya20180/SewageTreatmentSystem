@@ -57,6 +57,25 @@ public class DataValueManagementController {
 
 
 
+
+    @RequestMapping(value = "/getdata",method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String,Object>getData(){
+        String deviceId="00015203000000000001";
+
+        Map<String,Object>modelMap=new HashMap<>();
+        DataValueExecution dve=dataValueService.getnowdate(deviceId);
+        if(dve.getState()==DataValueEnum.SUCCESS.getState()){
+            modelMap.put("data",dve.getDataValueList());
+            modelMap.put("success",true);
+        }else{
+            modelMap.put("success",false);
+        }
+        return modelMap;
+
+    }
+
+
     @RequestMapping(value = "/getdatabetweendate",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> getDataValueBetweenDate(String[] data,String stime,String etime){
@@ -99,6 +118,7 @@ public class DataValueManagementController {
         return modelMap;
     }
 
+    /*
     @RequestMapping(value = "/getnowdatavalue")
     @ResponseBody
     public Map<String,Object> getDataValue(HttpServletRequest request){
@@ -118,7 +138,7 @@ public class DataValueManagementController {
 
     }
 
-
+*/
 
 
         @RequestMapping(value = "/downLoadExcel",method =RequestMethod.GET)

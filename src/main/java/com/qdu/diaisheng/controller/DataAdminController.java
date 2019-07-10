@@ -20,4 +20,8 @@ public class DataAdminController {
     private String dataExport(){
         return "admin/table-export";
     }
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    private String dataList(){
+        return "admin/List";
+    }
 }

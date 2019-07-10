@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.ListResourceBundle;
 
 public class DataValueServiceTest extends BaseTest {
     @Autowired
@@ -52,5 +53,30 @@ public class DataValueServiceTest extends BaseTest {
         }
     }
 
+
+
+
 */
+
+
+
+    @Test
+    public void testGetDataValue(){
+
+        String deviceId="00015203000000000001";
+
+
+        DataValueExecution dataValueExecution=dataValueService.getnowdate(deviceId);
+
+
+        List<DataValue>dataValueList=dataValueExecution.getDataValueList();
+        System.out.println(dataValueList.size());
+        for(DataValue dataValue:dataValueList){
+            System.out.println(dataValue);
+        }
+
+
+
+
+    }
 }

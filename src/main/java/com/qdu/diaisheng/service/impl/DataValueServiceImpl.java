@@ -1,11 +1,15 @@
 package com.qdu.diaisheng.service.impl;
 
 import com.qdu.diaisheng.DataValueEnum;
+import com.qdu.diaisheng.dao.DataPointDao;
 import com.qdu.diaisheng.dao.DataVauleDao;
+import com.qdu.diaisheng.dao.DeviceDao;
 import com.qdu.diaisheng.dto.DataValueExecution;
+import com.qdu.diaisheng.entity.DataPoint;
 import com.qdu.diaisheng.entity.DataValue;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.qdu.diaisheng.service.DataValueService;
@@ -20,6 +24,8 @@ public class DataValueServiceImpl implements DataValueService {
     @Autowired
     private DataVauleDao dataValueDao;
 
+    @Autowired
+    private DataPointDao dataPointDao;
 
     /**
      * 向数据库中添加数据
@@ -68,28 +74,31 @@ public class DataValueServiceImpl implements DataValueService {
         return dve;
     }
  */
-    /**
-     *
-     * 通过pointId和日期来获取数据
-     * @param date
-     * @param
-     * @return
-     */
+
     @Override
-    public DataValueExecution getnowdate(String date, String pointId) {
+    public DataValueExecution getnowdate(String deviceId) {
+
+        List<DataValue>dataValueList=new ArrayList<>();
         DataValueExecution dve=new DataValueExecution();
-        if(date!=null&&pointId!=null){
-            List<DataValue> dataValueList= dataValueDao.getnowdate(date,pointId);
-            if(dataValueList!=null){
-                dve.setDataValueList(dataValueList);
-
-                dve.setState(DataValueEnum.SUCCESS.getState());
+        List<DataPoint> dataPointList=dataPointDao.getDataPointbyDevice(deviceId);
+        if(dataPointList!=null){
+            for(DataPoint dataPoint:dataPointList){
+                dataValueList.add(dataValueDao.getnowdate(dataPoint.getDataPointId()));
             }
-
         }else{
-            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
+            dve.setState(DataValueEnum.EMPTY.getState());
+
+        }
+
+        if(dataValueList!=null){
+            dve.setDataValueList(dataValueList);
+            dve.setState(DataValueEnum.SUCCESS.getState());
+        }else{
+            dve.setState(DataValueEnum.EMPTY.getState());
+
         }
         return dve;
+
     }
 
     /**
