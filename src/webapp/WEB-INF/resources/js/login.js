@@ -62,25 +62,23 @@ $(document).ready(function() {
 
 
 	$('#sub').click(function(){
-		var username=$('#u').val();
-		var password=$('#p').val();
-		var url="/diaisheng/admin/logincheck";
+		//var username=$('#u').val();
+		//var password=$('#p').val();
+		//var url="/diaisheng/admin/logincheck";
+		window.location.href="/diaisheng/data/list";
+		/*
 		$.ajax({
 			type:'POST',
 			url: url,
 			data: {userName:username,password:password},
 			dataType: "json",
 			success: function(data) {
-				if(data.success){
-					alert("success");
-				}else{
-					alert(data.errMsg);
-				}
+
 			},
 			error:function (err) {
 			    console.log(err);
 			}
-		})
+		})*/
 	});
 
 
