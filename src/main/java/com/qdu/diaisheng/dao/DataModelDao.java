@@ -6,9 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface DataModelDao {
-    int insertDataModel(DataModel dataModel);
-    List<DataModel> queryDataModelByDeviceId(String Device);
-    int deleteDataModel(int dataModelId);
+    int insertDataModel(DataModel dataModel);//插入数据模板
+    List<DataModel> queryDataModelByDeviceId(String Device);//查询数据模板
+    int deleteDataModel(int dataModelId);//删除数据模板
     int updateDataModel(@Param("dataModelName") String dataModelName,
-                        @Param("dataModelId") int dataModelId);
+                        @Param("dataModelId") int dataModelId);//更新数据模板
 }

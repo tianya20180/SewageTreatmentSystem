@@ -1,5 +1,6 @@
 package com.qdu.diaisheng.dao;
 
+import com.qdu.diaisheng.entity.DataPoint;
 import com.qdu.diaisheng.entity.DataValue;
 import org.apache.ibatis.annotations.Param;
 
@@ -16,7 +17,7 @@ public interface DataVauleDao {
                                                @Param("date2") String date2,
                                                @Param("dataPointId") String dataPointId);//在一个数据点中查询两个日期之间的数据
 
-    DataValue getnowdate(@Param("dataPointId")String dataPointId);
+    List<DataValue> getnowdate(@Param("dataPointIds") List<String> dataPointId);//获取最新的数据
 
     void exportDataValue(@Param("pointId")String pointId,
                         @Param("startDate")String startDate,

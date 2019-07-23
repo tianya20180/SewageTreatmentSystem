@@ -4,6 +4,14 @@ import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.Date;
 
+
+/**
+ * @Autor wangxi
+ * @Description 设备实体类 对应数据库device表
+ * @Date 2019/7/22
+ *
+ */
+
 public class Device {
     private String deviceId;//设备ID
     private String deviceName;//设备名

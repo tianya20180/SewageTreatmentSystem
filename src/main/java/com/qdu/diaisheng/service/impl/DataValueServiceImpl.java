@@ -48,32 +48,15 @@ public class DataValueServiceImpl implements DataValueService {
         }
     }
 
-    /**
-     * 通过数据点Id来查询数据列表
-     * @param ponitId
-     * @return
-     */
-    /*
-    @Override
-    public DataValueExecution getDataValueListByPointId(String ponitId) {
-        DataValueExecution dve=new DataValueExecution();
 
-        if(ponitId!=null){
-            List<DataValue> dataValueList =dataValueDao.queryByDataPointId(ponitId);
-            if(dataValueList!=null){
-                dve.setDataValueList(dataValueList);
-                dve.setCount(dataValueList.size());
-                dve.setState(DataValueEnum.SUCCESS.getState());
-            }
-            else{
-                dve.setState(DataValueEnum.EMPTY.getState());
-            }
-        }else{
-            return new DataValueExecution(DataValueEnum.PAR_EMPTY);
-        }
-        return dve;
-    }
- */
+    /**
+     * @author wx
+     * @date  2019/7/23
+     * @Description 获取最新的数据 先根据设备id获取所有的数据点id，然后调用dao层获取数据
+     * @return dataValueExecution
+     * @throws
+     * @since
+    */
 
     @Override
     public DataValueExecution getnowdate(String deviceId) {
@@ -81,11 +64,16 @@ public class DataValueServiceImpl implements DataValueService {
         List<DataValue>dataValueList=new ArrayList<>();
         DataValueExecution dve=new DataValueExecution();
         List<DataPoint> dataPointList=dataPointDao.getDataPointbyDevice(deviceId);
+        List<String>ds=new ArrayList<>();
         if(dataPointList!=null){
             for(DataPoint dataPoint:dataPointList){
-                dataValueList.add(dataValueDao.getnowdate(dataPoint.getDataPointId()));
+                ds.add(dataPoint.getDataPointId());
             }
-        }else{
+            dataValueList=dataValueDao.getnowdate(ds);
+
+        }
+
+       else{
             dve.setState(DataValueEnum.EMPTY.getState());
 
         }

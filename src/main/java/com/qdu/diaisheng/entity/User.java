@@ -1,10 +1,16 @@
 package com.qdu.diaisheng.entity;
 
+/**
+ * @Autor wangxi
+ * @Description 用户的实体类
+ * @Date 2019/7/22
+ *
+ */
 public class User {
-    private Integer userId;
-    private String userName;
-    private String phoneNum;
-    private String password;
+    private Integer userId;//用户id
+    private String userName;//用户名
+    private String phoneNum;//电话号码
+    private String password;//密码
 
 
     public Integer getUserId() {

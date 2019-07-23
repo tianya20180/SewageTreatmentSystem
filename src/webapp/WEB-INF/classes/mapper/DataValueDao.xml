@@ -36,10 +36,6 @@
     </select>
 
 
-    <select id="queryLastData" parameterType="String" resultMap="dataValueMap">
-        select*from data_value where data_value_id=(select last_insert_id())
-        and data_point_id=#{dataPointId};
-    </select>
 
   <select id="exportDataValue">
 
@@ -51,11 +47,12 @@
 
   </select>
 
-    <select id="getnowdate" parameterType="String" resultMap="dataValueMap" >
+    <!-- 根据dataPoint查询最新的数据   -->
+    <select id="getnowdate" resultMap="dataValueMap" >
 
-         select*from data_value where  data_point_id =#{dataPointId} order by create_time desc limit 0,1;
-
-
+        <foreach collection="dataPointIds" item="dataPointId"  separator="union all" close="">
+            ( select*from data_value where data_point_id=#{dataPointId} order by create_time desc limit 0,1)
+        </foreach>
 
     </select>
 

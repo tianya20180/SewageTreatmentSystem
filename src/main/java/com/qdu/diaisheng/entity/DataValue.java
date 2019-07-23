@@ -3,6 +3,14 @@ package com.qdu.diaisheng.entity;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+/**
+ * @Autor wangxi
+ * @Description 数据值实体类 对应数据库data_value表
+ * @Date 2019/7/22
+ *
+ */
+
+
 public class DataValue{
     private int dataValueId;//数据id
     private DataPoint dataPoint;//数据点

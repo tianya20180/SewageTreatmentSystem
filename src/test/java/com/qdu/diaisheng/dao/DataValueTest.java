@@ -85,6 +85,7 @@ public class DataValueTest extends BaseTest {
 
 
     @Test
+    @Ignore
     public void  testqueryBetweenDateAtPointIds(){
         String startDate="2019-04-30 00:01:00";
         String endDate="2019-05-01 02:14:0";
@@ -97,5 +98,21 @@ public class DataValueTest extends BaseTest {
         }
     }
 
+
+
+    @Test
+    public void testGetNowData(){
+
+        List<String>dataPointIds=new ArrayList<>();
+        dataPointIds.add("41607");
+        dataPointIds.add("32269");
+        List<DataValue>dataValueList=dataVauleDao.getnowdate(dataPointIds);
+        if(dataValueList!=null){
+            for(DataValue dv:dataValueList){
+                System.out.println("val:"+dv.getValue()+"time:"+dv.getCreateTime());
+            }
+        }
+
+    }
 
 }

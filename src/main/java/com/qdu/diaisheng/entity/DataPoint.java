@@ -2,6 +2,14 @@ package com.qdu.diaisheng.entity;
 
 import java.util.Date;
 
+/**
+ * @Autor wangxi
+ * @Description 数据点实体类 对应数据库 data_point
+ * @Date 2019/7/22
+ *
+ */
+
+
 //数据点实体类
 public class DataPoint {
     private String dataPointId;//数据点ID

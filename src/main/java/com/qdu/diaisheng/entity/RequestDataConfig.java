@@ -1,4 +1,11 @@
 package com.qdu.diaisheng.entity;
+/**
+ * @Autor wangxi
+ * @Description 请求信息设置类
+ * @Date 2019/7/22
+ *
+ */
+
 
 public class RequestDataConfig {
     private int SlavaId;

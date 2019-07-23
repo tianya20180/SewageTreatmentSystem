@@ -14,12 +14,13 @@ import com.qdu.diaisheng.service.DataValueService;
 import com.qdu.diaisheng.service.DeviceService;
 import com.qdu.diaisheng.util.HttpServletUtil;
 import com.sun.tools.internal.ws.processor.model.Model;
-
+/*
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+*/
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -42,7 +43,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-import org.apache.poi.ss.usermodel.Cell;
+//import org.apache.poi.ss.usermodel.Cell;
+
+/**
+        * @Autor wangxi
+        * @Description 数据点controller
+        * @Date 2019/7/22
+        *
+        */
+
 @Controller
 @RequestMapping("/valueadmin")
 public class DataValueManagementController {
@@ -57,7 +66,15 @@ public class DataValueManagementController {
 
 
 
-
+/**
+ * @author wangxi
+ * @Description
+ * @date  2017/7/20
+ * @Description 获取最新的数据，然后返回给前端
+ * @return Map
+ * @throws
+ * @since
+*/
     @RequestMapping(value = "/getdata",method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object>getData(){
@@ -75,6 +92,15 @@ public class DataValueManagementController {
 
     }
 
+    /**
+     * @author wangxi
+     * @Description
+     * @date  2017/7/20
+     * @Description 获取前端的数据id,开始时间，结束时间，然后返回某一数据点在某一时间段的数据
+     * @return Map
+     * @throws
+     * @since
+     */
 
     @RequestMapping(value = "/getdatabetweendate",method = RequestMethod.POST)
     @ResponseBody
@@ -141,6 +167,20 @@ public class DataValueManagementController {
 */
 
 
+
+
+    /**
+     * @author wangxi
+     * @Description
+     * @date  2017/7/20
+     * @Description 下载数据 获取前端的数据id,开始时间，结束时间，然后返回某一数据点在某一时间段的数据
+     * @return Map
+     * @throws
+     * @since
+     */
+
+
+/*
         @RequestMapping(value = "/downLoadExcel",method =RequestMethod.GET)
         public void downLoadExcel(String[] data,String stime,String etime, HttpServletResponse response) throws IOException{
 
@@ -213,7 +253,7 @@ public class DataValueManagementController {
                 }
             }
         }
-
+*/
 
 
 

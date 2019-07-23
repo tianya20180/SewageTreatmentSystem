@@ -235,8 +235,8 @@ var myCharts = echarts.init(document.getElementById("main"));
             xAxisIndex: 0,
             start: 10,
             end: 60
-        },
-        {
+        }
+        /*{
             type: 'slider',
             yAxisIndex: 0,
             start: 30,
@@ -247,7 +247,7 @@ var myCharts = echarts.init(document.getElementById("main"));
             yAxisIndex: 0,
             start: 30,
             end: 80
-        }
+        }*/
     ],
     
             series:{
@@ -284,7 +284,7 @@ var myCharts = echarts.init(document.getElementById("main"));
                 trigger:'axis'
             },
             legend:{
-                data:'出水量'
+                data:['出水量']
 //                data:[]
             },
             grid:{
@@ -318,18 +318,6 @@ var myCharts = echarts.init(document.getElementById("main"));
             xAxisIndex: 0,
             start: 10,
             end: 60
-        },
-        {
-            type: 'slider',
-            yAxisIndex: 0,
-            start: 30,
-            end: 80
-        },
-        {
-            type: 'inside',
-            yAxisIndex: 0,
-            start: 30,
-            end: 80
         }
     ],
     

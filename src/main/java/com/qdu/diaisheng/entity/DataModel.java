@@ -1,6 +1,14 @@
 package com.qdu.diaisheng.entity;
 
 import java.util.Date;
+
+/**
+ * @Autor wangxi
+ * @Description 数据模板实体类 对应数据库 data_model
+ * @Date 2019/7/22
+ *
+ */
+
 //数据模型实体类
 public class DataModel {
     private Integer dataModelId;//数据模型Id
