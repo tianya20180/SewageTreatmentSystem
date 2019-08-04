@@ -6,36 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3a4b9be2-49ad-4639-82a1-5f4da1f660fb" name="Default Changelist" comment="更新前端">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/diaisheng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/diaisheng.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/diaiisheng-dataplatform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/diaiisheng-dataplatform.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/Server/ClientHander.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/Server/ClientHander.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/controller/DataModelManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/controller/DataModelManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/controller/DataValueManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/controller/DataValueManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/dao/DataVauleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/dao/DataVauleDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/DataValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/Device.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/RequestDataConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/RequestDataConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/service/DataValueService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/service/DataValueService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/service/impl/DataValueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/service/impl/DataValueServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/util/DBMysqlUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/com/qdu/diaisheng/util/DBMysqlUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/mapper/DataValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/classes/mapper/DataValueDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/html/admin/List.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/html/admin/List.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/lib/jconsole.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/lib/jconsole.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/lib/tools.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/lib/tools.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/test-classes/com/qdu/diaisheng/dao/DataValueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/diaisheng/WEB-INF/test-classes/com/qdu/diaisheng/dao/DataValueTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/controller/DataValueManagementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/dao/DataVauleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/DataValueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qdu/diaisheng/service/impl/DataValueServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DataValueDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/html/admin/List.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/html/admin/List.html" afterDir="false" />
-    </list>
+    <list default="true" id="3a4b9be2-49ad-4639-82a1-5f4da1f660fb" name="Default Changelist" comment="更新前端" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +62,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44252872" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -417,6 +388,7 @@
       <workItem from="1564881918552" duration="2392000" />
       <workItem from="1564887127771" duration="64000" />
       <workItem from="1564887320353" duration="14000" />
+      <workItem from="1564887426281" duration="341000" />
     </task>
     <task id="LOCAL-00001" summary="新增data_value Service层及其测试用例">
       <created>1558583790741</created>
@@ -488,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1562751621879</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="更新前端">
+      <created>1564887481195</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564887481195</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
