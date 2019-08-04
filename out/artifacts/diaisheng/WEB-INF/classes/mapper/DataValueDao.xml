@@ -6,6 +6,7 @@
         values
         (#{dataValueId},#{dataPoint.dataPointId},#{value},date_format(#{createTime},'%Y-%m-%d %H:%i:%S'))
     </insert>
+
     <resultMap id="dataValueMap" type="com.qdu.diaisheng.entity.DataValue">
         <id column="data_value_id" property="dataValueId"/>
         <result column="val" property="value"/>
@@ -22,6 +23,10 @@
         </association>
     </resultMap>
 
+    <select id="findByModelId" parameterType="String" resultType="com.qdu.diaisheng.entity.DataModel">
+        select data_model_id,data_model_name from data_model where data_model_name
+    </select>
+
     <select id="findById" parameterType="String" resultType="com.qdu.diaisheng.entity.DataPoint">
         select data_point_id,data_point_name,data_model_id from data_point where data_point_id=#{dataPointId}
     </select>
@@ -30,16 +35,11 @@
        select*from data_value where data_point_id=#{dataPointId}
     </select>
 
-
     <select id="queryByDate" parameterType="String" resultMap="dataValueMap">
         select*from data_value where create_time=#{date}
     </select>
 
 
-    <select id="queryLastData" parameterType="String" resultMap="dataValueMap">
-        select*from data_value where data_value_id=(select last_insert_id())
-        and data_point_id=#{dataPointId};
-    </select>
 
   <select id="exportDataValue">
 
@@ -51,10 +51,22 @@
 
   </select>
 
-    <select id="getnowdate" parameterType="String" resultMap="dataValueMap" >
+    <!-- 根据dataPoint查询最新的数据   -->
+    <!--mysql中建立了（data_point_id,create_time）的复合索引-->
 
-         select*from data_value where  data_point_id =#{dataPointId} order by create_time desc limit 0,1;
+    <select id="getnowdate" resultMap="dataValueMap" >
 
+        <foreach collection="dataPointIds" item="dataPointId"  separator="union all" close="">
+            ( select*from data_value where data_point_id=#{dataPointId} order by create_time desc limit 0,1)
+        </foreach>
+
+    </select>
+
+    <!--根据数据点获取最新的数据-->
+    <select id="getDataByPointId" resultType="com.qdu.diaisheng.entity.DataValue" parameterType="String" >
+
+
+     select*from data_value where data_point_id=#{dataPointId} order by create_time desc limit 0,1
 
 
     </select>

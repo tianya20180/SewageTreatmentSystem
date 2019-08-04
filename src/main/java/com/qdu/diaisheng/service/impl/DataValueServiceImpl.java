@@ -133,4 +133,22 @@ public class DataValueServiceImpl implements DataValueService {
         dataValueDao.exportDataValue(pointId,startDate,endDate);
     }
 
+    @Override
+    public DataValueExecution getDataValueByDataPoint(String dataPointId) {
+        DataValueExecution dve=new DataValueExecution();
+
+        if(dataPointId!=null){
+            DataValue dataValue=dataValueDao.getDataByPointId(dataPointId);
+            if(dataValue!=null){
+                dve.setDataValue(dataValue);
+                dve.setState(DataValueEnum.SUCCESS.getState());
+            }else{
+                dve.setState(DataValueEnum.EMPTY.getState());
+            }
+        }else{
+            dve.setState(DataValueEnum.PAR_EMPTY.getState());
+        }
+        return dve;
+    }
+
 }

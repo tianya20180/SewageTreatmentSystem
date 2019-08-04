@@ -1,5 +1,6 @@
 package com.qdu.diaisheng.dao;
 
+import com.qdu.diaisheng.entity.DataModel;
 import com.qdu.diaisheng.entity.DataPoint;
 import com.qdu.diaisheng.entity.DataValue;
 import org.apache.ibatis.annotations.Param;
@@ -27,4 +28,8 @@ public interface DataVauleDao {
     List<DataValue> queryBetweenDateAtPointIds(@Param("date1") String date1,
                                                @Param("date2") String date2,
                                                @Param("dataPointIds") List<String> dataPointId);
+
+    DataModel findByModelId(String dataModelId);
+
+    DataValue getDataByPointId(String dataPointId);
 }

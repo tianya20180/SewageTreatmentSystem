@@ -23,6 +23,7 @@ public interface DataValueService {
 
     void exportDateValue(String pointId,String startDate,String endDate);
 
+    DataValueExecution getDataValueByDataPoint(String dataPointId);
 
 
 }

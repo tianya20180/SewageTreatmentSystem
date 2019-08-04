@@ -66,6 +66,8 @@
         </element>
       </element>
       <element id="javaee-facet-resources" facet="diaiisheng-dataplatform/web/diaisheng" />
+      <element id="javaee-facet-resources" facet="diaiisheng-dataplatform/web/Web" />
+      <element id="javaee-facet-resources" facet="diaiisheng-dataplatform/web/Web" />
     </root>
   </artifact>
 </component>

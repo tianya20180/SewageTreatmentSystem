@@ -6,6 +6,7 @@
         values
         (#{dataValueId},#{dataPoint.dataPointId},#{value},date_format(#{createTime},'%Y-%m-%d %H:%i:%S'))
     </insert>
+
     <resultMap id="dataValueMap" type="com.qdu.diaisheng.entity.DataValue">
         <id column="data_value_id" property="dataValueId"/>
         <result column="val" property="value"/>
@@ -22,6 +23,10 @@
         </association>
     </resultMap>
 
+    <select id="findByModelId" parameterType="String" resultType="com.qdu.diaisheng.entity.DataModel">
+        select data_model_id,data_model_name from data_model where data_model_name
+    </select>
+
     <select id="findById" parameterType="String" resultType="com.qdu.diaisheng.entity.DataPoint">
         select data_point_id,data_point_name,data_model_id from data_point where data_point_id=#{dataPointId}
     </select>
@@ -29,7 +34,6 @@
     <select id="queryByDataPointId" parameterType="String" resultMap="dataValueMap">
        select*from data_value where data_point_id=#{dataPointId}
     </select>
-
 
     <select id="queryByDate" parameterType="String" resultMap="dataValueMap">
         select*from data_value where create_time=#{date}
@@ -55,6 +59,15 @@
         <foreach collection="dataPointIds" item="dataPointId"  separator="union all" close="">
             ( select*from data_value where data_point_id=#{dataPointId} order by create_time desc limit 0,1)
         </foreach>
+
+    </select>
+
+    <!--根据数据点获取最新的数据-->
+    <select id="getDataByPointId" resultType="com.qdu.diaisheng.entity.DataValue" parameterType="String" >
+
+
+     select*from data_value where data_point_id=#{dataPointId} order by create_time desc limit 0,1
+
 
     </select>
 
